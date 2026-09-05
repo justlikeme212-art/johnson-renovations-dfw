@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Johnson Renovations DFW</title>
+<meta name="description" content="Johnson Renovations DFW — kitchen, bathroom, carpentry, outdoor living and whole-home renovation services throughout Dallas-Fort Worth.">
+<style>
+:root{
+  --navy:#24384b;
+  --navy2:#1e3042;
+  --baby:#8fd0f6;
+  --baby2:#58afe3;
+  --baby3:#eaf7ff;
+  --baby4:#f5fbff;
+  --ink:#263747;
+  --muted:#657684;
+  --line:#dceaf3;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+.wrap{width:min(1240px,94%);margin:auto}
+.serif{font-family:Georgia,"Times New Roman",serif}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.98);border-bottom:1px solid #eef4f8;box-shadow:0 3px 20px rgba(31,70,101,.05)}
+.navbar{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,serif;font-size:27px;font-weight:700;color:var(--navy);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:30px;font-size:14px}
+.nav a{padding:28px 0 24px}
+.nav a.active,.nav a:hover{color:var(--baby2);border-bottom:2px solid var(--baby2)}
+.nav .phone{border:0!important;font-weight:800;color:var(--navy)}
+.cta{background:var(--baby2);color:#fff!important;border-radius:7px;padding:13px 19px!important;border-bottom:0!important;font-weight:800}
+.cta:hover{background:#409bcf}
+
+.hero{
+  min-height:610px;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.90) 35%,rgba(255,255,255,.40) 59%,rgba(255,255,255,.03) 100%),
+    url("images/IMG_2818.jpg") center/cover no-repeat;
+}
+.hero .wrap{min-height:610px;display:flex;align-items:center}
+.hero-copy{max-width:705px;padding:60px 0}
+.eyebrow{font-size:12px;letter-spacing:4px;font-weight:800;text-transform:uppercase;color:#6c8ca2;margin-bottom:20px}
+h1{font-family:Georgia,serif;color:var(--navy);font-size:clamp(50px,6vw,75px);line-height:.97;letter-spacing:-1.7px;margin:0 0 20px}
+.hero p{font-size:20px;color:#586b79;line-height:1.55;max-width:620px}
+.hero-buttons{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:6px;padding:15px 25px;font-weight:800;cursor:pointer}
+.btn.primary{background:var(--baby2);color:#fff}
+.btn.primary:hover{background:#409bcf}
+.btn.outline{background:#fff;border:1px solid #9bcce7;color:var(--navy)}
+.badges{display:flex;gap:48px;flex-wrap:wrap;margin-top:42px}
+.badge{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:11px;letter-spacing:1.1px;font-weight:800;color:#536978}
+.badge-icon{width:44px;height:44px;border-radius:50%;border:1.5px solid #a8dbf7;color:var(--baby2);display:grid;place-items:center;font-size:21px;background:rgba(255,255,255,.72)}
+
+section{padding:62px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.section-head h2{font-family:Georgia,serif;font-size:36px;color:var(--navy);margin:0}
+.head-line{width:62px;height:2px;background:var(--baby2);display:inline-block;margin-left:15px;vertical-align:middle}
+.smallcap{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#6d8ca3;font-weight:800}
+.services{background:#fff}
+.service-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.service-card{position:relative;background:#fff;border:1px solid #e7eff4;border-radius:7px;overflow:hidden;box-shadow:0 8px 25px rgba(40,83,112,.09)}
+.service-card img{height:190px;object-fit:cover}
+.service-content{padding:17px 18px 20px;position:relative}
+.float-icon{position:absolute;top:-31px;left:50%;transform:translateX(-50%);width:60px;height:60px;border-radius:50%;background:#f6fbff;border:1px solid #b8e1f8;color:var(--baby2);display:grid;place-items:center;font-size:25px}
+.service-content h3{font-family:Georgia,serif;color:var(--navy);font-size:19px;text-align:center;margin:29px 0 9px}
+.service-content p{font-size:14px;line-height:1.5;color:#617382;text-align:center;margin:0;min-height:64px}
+.service-arrow{text-align:center;color:var(--baby2);font-size:24px;margin-top:7px}
+
+.projects{background:linear-gradient(#fff,#fbfdff)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{border:0;background:var(--baby3);color:#647b8b;border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
+.filter.active{background:var(--baby2);color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.project{border:1px solid #e2edf4;border-radius:6px;overflow:hidden;background:#fff}
+.project img{height:230px;object-fit:cover}
+.project .label{font-family:Georgia,serif;font-size:14px;color:var(--navy);padding:9px 11px;background:#eaf6fd}
+
+.why{background:linear-gradient(90deg,#eaf8ff,#f8fcff)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.why-item{text-align:center;padding:16px 30px;border-right:1px solid #cfe5f1}
+.why-item:last-child{border-right:0}
+.why-icon{font-size:34px;color:var(--baby2)}
+.why-item h3{font-family:Georgia,serif;color:var(--navy);font-size:19px;margin:9px 0 6px}
+.why-item p{color:#627482;font-size:14px;line-height:1.5;margin:0}
+
+.contact-section{background:#fff;padding-top:40px}
+.contact-grid{display:grid;grid-template-columns:1.15fr 1.25fr .8fr;gap:26px}
+.box{border:1px solid #e4edf3;border-radius:10px;background:#fff;box-shadow:0 7px 24px rgba(36,76,105,.07);padding:27px}
+.box h2{font-family:Georgia,serif;font-size:30px;color:var(--navy);margin:0 0 8px}
+.stars{color:#f5b342;font-size:24px;letter-spacing:4px}
+.quote-mark{font-size:48px;color:#7ec8f5;line-height:1}
+.testimonial-text{font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#4f6170;margin-top:10px}
+.placeholder-note{font-size:12px;color:#8795a0;font-style:italic;margin-top:16px}
+form input,form select,form textarea{width:100%;padding:12px 13px;border:1px solid #d6e4ed;border-radius:4px;font:inherit;margin:5px 0}
+form textarea{height:92px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.area{background:var(--baby4)}
+.area .pin{font-size:35px;color:var(--baby2)}
+.area h3{font-family:Georgia,serif;color:var(--navy);font-size:21px;margin:8px 0}
+.area p{color:#647786;line-height:1.55;font-size:14px}
+.area hr{border:0;border-top:1px solid #cfe3ef;margin:20px 0}
+.area .call{font-size:21px;color:var(--navy);font-weight:900}
+
+footer{background:var(--navy2);color:#d9e4ec;padding:33px 0 17px}
+.footer-main{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:35px;align-items:start}
+footer .logo{color:#fff;font-size:25px}
+footer p,footer a{font-size:13px;line-height:1.8}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.socials{display:flex;gap:12px;justify-content:flex-end;font-size:18px}
+.copy{margin-top:28px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;color:#aebeca;font-size:12px}
+.mobile-call{display:none;position:fixed;bottom:12px;left:12px;right:12px;background:var(--baby2);color:#fff;padding:14px;text-align:center;border-radius:7px;font-weight:900;z-index:60}
+
+
+.reviews-panel{background:#fff;padding:62px 0}
+.review-summary{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:24px}
+.rating-big{display:flex;align-items:center;gap:14px;background:var(--baby4);border:1px solid #d9edf8;border-radius:10px;padding:15px 18px}
+.rating-big strong{font-family:Georgia,serif;font-size:28px;color:var(--navy)}
+.rating-big span{color:#f5b342;letter-spacing:2px;font-size:20px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review-card{border:1px solid #e1edf4;border-radius:9px;padding:18px;background:#fff;box-shadow:0 6px 18px rgba(40,83,112,.06)}
+.review-card:nth-child(n+7){display:none}
+.reviews-grid.show-all .review-card{display:block}
+.review-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.review-top strong{font-family:Georgia,serif;color:var(--navy);font-size:16px}
+.review-source{font-size:11px;color:#8a9aa6;margin-top:3px;text-transform:uppercase;letter-spacing:.8px}
+.review-stars{color:#f5b342;white-space:nowrap;font-size:14px}
+.review-card p{font-size:14px;line-height:1.55;color:#617382;margin:12px 0 0}
+.review-actions{text-align:center;margin-top:22px}
+.reviews-link{display:inline-block;margin-left:10px;color:var(--baby2);font-weight:800;font-size:14px}
+@media(max-width:1000px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.reviews-grid{grid-template-columns:1fr}.review-summary{display:block}.rating-big{margin-top:18px;display:inline-flex}}
+
+@media(max-width:1050px){
+ .nav a:not(.phone):not(.cta){display:none}
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ .why-grid{grid-template-columns:repeat(2,1fr)}
+ .why-item:nth-child(2){border-right:0}
+ .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+ .navbar{height:70px}.logo{font-size:20px}
+ .nav .phone{display:none}.cta{padding:11px 14px!important;font-size:12px}
+ .hero,.hero .wrap{min-height:600px}
+ .hero{background-position:62% center}
+ h1{font-size:49px}
+ .hero p{font-size:18px}
+ .badges{gap:14px}
+ .service-grid,.gallery,.why-grid,.footer-main{grid-template-columns:1fr}
+ .service-card img,.project img{height:250px}
+ .section-head{display:block}
+ .filters{margin-top:16px}
+ .why-item{border-right:0;border-bottom:1px solid #cfe5f1}
+ .two{grid-template-columns:1fr}
+ .footer-links,.socials{justify-content:flex-start}
+ .copy{display:block}
+ .mobile-call{display:block}
+ body{padding-bottom:70px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap navbar">
+    <a href="#home" class="logo">Johnson Renovations DFW</a>
+    <nav class="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#why">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="phone" href="tel:9727620310">☎ &nbsp;972-762-0310</a>
+      <a class="cta" href="#contact">Get a Free Estimate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">Transforming Houses Into Homes</div>
+      <h1>DFW Home Renovation & Remodeling Experts</h1>
+      <p>Serving the DFW area for over 20 years. Kitchens, bathrooms, carpentry, outdoor living, and whole-home renovations.</p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#contact">Schedule Consultation &nbsp;→</a>
+        <a class="btn outline" href="#projects">View Projects</a>
+      </div>
+      <div class="badges">
+        <div class="badge"><span class="badge-icon">⌂</span>Quality<br>Craftsmanship</div>
+        <div class="badge"><span class="badge-icon">✓</span>Trusted<br>Local Experts</div>
+        <div class="badge"><span class="badge-icon">20+</span>Years<br>of Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2>Our Services <span class="head-line"></span></h2></div>
+      <div class="smallcap">Renovate &nbsp;•&nbsp; Improve &nbsp;•&nbsp; Enjoy</div>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <img src="images/IMG_2818.jpg" alt="Kitchen renovation">
+        <div class="service-content"><div class="float-icon">♨</div><h3>Kitchen Remodeling</h3><p>Modern, functional kitchens designed for the way you live.</p><div class="service-arrow">→</div></div>
+      </article>
+      <article class="service-card">
+        <img src="images/IMG_2820.jpg" alt="Bathroom renovation">
+        <div class="service-content"><div class="float-icon">⌁</div><h3>Bathroom Remodeling</h3><p>Beautiful, spa-like bathrooms built with quality and care.</p><div class="service-arrow">→</div></div>
+      </article>
+      <article class="service-card">
+        <img src="images/IMG_2832.jpg" alt="Custom built in closet">
+        <div class="service-content"><div class="float-icon">▥</div><h3>Carpentry & Built-Ins</h3><p>Custom cabinetry, built-ins and detailed carpentry work.</p><div class="service-arrow">→</div></div>
+      </article>
+      <article class="service-card">
+        <img src="images/IMG_2821.jpg" alt="Outdoor living space">
+        <div class="service-content"><div class="float-icon">♧</div><h3>Outdoor Living</h3><p>Expand your living space with beautiful outdoor areas.</p><div class="service-arrow">→</div></div>
+      </article>
+      <article class="service-card">
+        <img src="images/IMG_2824.jpg" alt="Whole home renovation">
+        <div class="service-content"><div class="float-icon">⌂</div><h3>Whole-Home Renovation</h3><p>From single rooms to complete home makeovers.</p><div class="service-arrow">→</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2>Featured Projects <span class="head-line"></span></h2></div>
+      <div>
+        <div class="smallcap" style="text-align:right;margin-bottom:10px">Real Homes. Real Results.</div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="kitchen">Kitchens</button>
+          <button class="filter" data-filter="bath">Bathrooms</button>
+          <button class="filter" data-filter="living">Living Spaces</button>
+          <button class="filter" data-filter="outdoor">Outdoor</button>
+          <button class="filter" data-filter="detail">Details</button>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="project kitchen"><img src="images/IMG_2818.jpg" alt=""><div class="label">Modern Kitchen Remodel</div></div>
+      <div class="project bath"><img src="images/IMG_2820.jpg" alt=""><div class="label">Spa-Inspired Bathroom</div></div>
+      <div class="project living"><img src="images/IMG_2819.jpg" alt=""><div class="label">Open Concept Living Room</div></div>
+      <div class="project outdoor"><img src="images/IMG_2821.jpg" alt=""><div class="label">Outdoor Living Space</div></div>
+      <div class="project bath"><img src="images/IMG_2828.jpg" alt=""><div class="label">Luxury Primary Bathroom</div></div>
+      <div class="project bath"><img src="images/IMG_2823.jpg" alt=""><div class="label">Elegant Bathroom Remodel</div></div>
+      <div class="project kitchen"><img src="images/IMG_2825.jpg" alt=""><div class="label">Updated Kitchen</div></div>
+      <div class="project detail"><img src="images/IMG_2831.jpg" alt=""><div class="label">Custom Vanity</div></div>
+      <div class="project detail"><img src="images/IMG_2832.jpg" alt=""><div class="label">Custom Built-Ins</div></div>
+      <div class="project bath"><img src="images/IMG_2829.jpg" alt=""><div class="label">Modern Bathroom</div></div>
+      <div class="project kitchen"><img src="images/IMG_2830.jpg" alt=""><div class="label">Contemporary Kitchen</div></div>
+      <div class="project outdoor"><img src="images/IMG_2826.jpg" alt=""><div class="label">Backyard Transformation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2>Why Homeowners Choose Us <span class="head-line"></span></h2></div>
+      <div class="smallcap">Experience Makes The Difference</div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-icon">♕</div><h3>20+ Years Experience</h3><p>Trusted by DFW homeowners for over two decades.</p></div>
+      <div class="why-item"><div class="why-icon">⚒</div><h3>Quality Craftsmanship</h3><p>Attention to detail and exceptional results.</p></div>
+      <div class="why-item"><div class="why-icon">◌◌</div><h3>Clear Communication</h3><p>Honest, responsive, and straightforward project management.</p></div>
+      <div class="why-item"><div class="why-icon">⌂</div><h3>Custom Design Solutions</h3><p>Tailored to your style, space and goals.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews-panel" id="reviews">
+  <div class="wrap">
+    <div class="review-summary">
+      <div>
+        <div class="smallcap">Customer Feedback</div>
+        <h2 style="font-family:Georgia,serif;font-size:36px;color:var(--navy);margin:6px 0 0">44 Houzz Reviews <span class="head-line"></span></h2>
+      </div>
+      <div class="rating-big"><strong>5.0</strong><span>★★★★★</span><small>44 reviews</small></div>
+    </div>
+    <p class="subtle" style="max-width:800px">All 44 reviewer names and ratings are represented below. To respect the original reviewers' words, each review is summarized rather than copied in full.</p>
+    <div class="reviews-grid" id="reviewsGrid">
+      
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Steve Stout and Heather Tatarsky</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the team&#x27;s guidance, craftsmanship, attention to detail, and care throughout a major bathroom remodel.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Leif Peterson</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Called Tim Johnson and his trades team terrific and said they plan to use them again for future projects.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-770750492</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Enjoyed collaborating on the design and praised the skilled tradespeople who helped bring the vision to life.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>foresterfamily89</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved the personal approach, creative ideas, meticulous painting, and the finished kitchen and mantle.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Blake Weaver</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+        </div>
+        <p>Was very pleased with a full kitchen and flooring renovation, praising Tim and the crew while noting scheduling and communication could improve.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>The Maddens</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the talented, polite, hardworking crew and said they planned to return for another renovation phase.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Linda Fisher</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved the results of extensive kitchen and bathroom remodeling and highlighted the team&#x27;s flexibility, design help, and professionalism.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Peggy</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the kitchen, bathroom and fireplace updates, along with the team&#x27;s ideas, consistency, and problem-solving.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Emily Norniella</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved the craftsmanship, quality and budget discipline on a kitchen and butler&#x27;s pantry project.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Virginia B.</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Reported outstanding service and a successful bathroom remodel with a knowledgeable, courteous and flexible team.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-548803520</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Said working with Kay made the renovation process simple and easy from start to finish.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-720123164</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the friendly, professional team and their attention to the smallest details.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-451093076</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Highlighted years of positive experience with Karen and her dedication to helping create a dream home.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-82017716</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Called Johnson Renovations one of the best in the business and praised Kay&#x27;s design and client relationships.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-4637200</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the team&#x27;s organization, detail orientation, streamlined process and transparent communication.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-814453430</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Highlighted quality workmanship, professionalism, friendliness and flexibility with changes.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-279863510</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Recommended the company as trustworthy and capable of delivering excellent renovation work.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-656880343</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised reliability, responsiveness and consistently strong project results.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>IG Design LLC</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Recommended Johnson Renovations for remodeling and highlighted Karen&#x27;s knowledge and helpfulness.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Eric Pike</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised customer service and quality workmanship as top priorities for the company.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>sarhunt86</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved the remodeled kitchen and praised the team&#x27;s thoroughness and responsiveness.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>cayce coburn</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Said the kitchen and living-room remodel stayed on budget and schedule with attentive communication and strong design support.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Cassie G</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised an extensive whole-home renovation, budget awareness, quality work and the team&#x27;s commitment to bringing a vision to life.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Nancy Barnes</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Highlighted excellent communication, responsive project management, skilled trades and a smooth guest-bath renovation.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Sara Reiter</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised a whole-home renovation for thoughtful planning, strong communication, detail and turning an outdated house into a beautiful home.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Carolyn R.</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Called the team trustworthy, skilled and consistent in communication during a complete bathroom renovation.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Robin Land</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Said a two-story addition finished on time, on budget and beyond expectations.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Kevin</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised Tim and Karen for adapting to changes and delivering a dream primary bedroom and bathroom on time and on budget.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-324087989</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved the new kitchen and bathrooms and praised design guidance that respected the home&#x27;s existing style.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-45701209</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Reported consistently excellent results across multiple projects and strongly recommended the company.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>HU-712898566</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the craftsmanship and hard work on two bathroom remodels and said they would hire the team again.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Jeff</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved a custom home bar project and praised Tim and the crew for problem-solving and attention to detail.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>marsha Jones</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the kitchen, living area and laundry renovation for professionalism, communication and strong results.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Al Martin</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Recommended the company after two investment-property remodels, praising speed, management and quality.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>curtisandbev</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Were extremely pleased with multiple renovated spaces and praised Tim and Karen&#x27;s professionalism and patience.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>maximo1</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Loved a complete interior renovation and highlighted thoughtful ideas, budget awareness and excellent attention to detail.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Woodthrush</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised the transformation, workmanship, professionalism and trustworthiness of the company.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Hope Adams</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Highlighted professionalism, clean jobsites, transparency and reliable guidance.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>James Morris</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised clear explanations and a successful home restoration after water damage.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Lyjah</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Called the team professional and efficient and said the quality of work stands out.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Mike Amis</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised scheduling, communication, responsiveness and Karen&#x27;s design and product-selection help.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Jackie Barrow</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Was very satisfied with a kitchen remodel and praised scheduling, workmanship and design selections.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>Moton Poole</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Praised professionalism, communication and the team&#x27;s ability to adapt while exceeding expectations.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div><strong>L Cherise</strong><div class="review-source">Houzz review</div></div>
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <p>Highly recommended Tim and Karen for detailed planning, clean work areas, on-time delivery and customer satisfaction.</p>
+      </article>
+    </div>
+    <div class="review-actions">
+      <button class="btn primary" id="toggleReviews" type="button">Show All 44 Reviews</button>
+      <a class="reviews-link" href="https://www.houzz.com/professionals/general-contractors/johnson-renovations-pfvwus-pf~1387891078" target="_blank" rel="noopener">Read full reviews on Houzz →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="box">
+      <h2>What Our Clients Say <span class="head-line"></span></h2>
+      <div class="quote-mark">“</div>
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">Johnson Renovations has 44 Houzz reviews with a displayed 5.0 average rating. Reviewers consistently praise craftsmanship, communication, design guidance and professionalism.</div>
+      <a class="reviews-link" href="#reviews">Explore all 44 review summaries →</a>
+    </div>
+    <div class="box">
+      <h2>Get a Free Estimate <span class="head-line"></span></h2>
+      <p class="subtle">Tell us about your project and we’ll be in touch to discuss the next step.</p>
+      <form onsubmit="event.preventDefault();alert('This preview form is ready to be connected to the company email or CRM.');">
+        <div class="two"><input required placeholder="Name *"><input required type="tel" placeholder="Phone *"></div>
+        <input required type="email" placeholder="Email *">
+        <select required><option value="">Project Type</option><option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Carpentry & Built-Ins</option><option>Outdoor Living</option><option>Whole-Home Renovation</option></select>
+        <textarea placeholder="Tell us about your project..."></textarea>
+        <button class="btn primary" style="width:170px;margin-top:7px">Send Message &nbsp;→</button>
+      </form>
+    </div>
+    <aside class="box area">
+      <div class="smallcap">Serving The DFW Area</div>
+      <div class="pin">●</div>
+      <h3>Proudly Serving Dallas-Fort Worth</h3>
+      <p>Home renovation and remodeling throughout the DFW area and surrounding communities.</p>
+      <hr>
+      <p>Have questions?<br>Call us anytime:</p>
+      <a class="call" href="tel:9727620310">972-762-0310</a>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-main">
+      <div><div class="logo">Johnson Renovations DFW</div><p>Quality Spaces. A Better Tomorrow.</p></div>
+      <div class="footer-links"><a href="#home">Home</a><a href="#why">About</a><a href="#services">Services</a><a href="#projects">Gallery</a><a href="#contact">Contact</a></div>
+      <div class="socials"><span>☎</span><a href="tel:9727620310">972-762-0310</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Johnson Renovations. All Rights Reserved.</span><span>Serving the DFW Area &nbsp;|&nbsp; Built on Trust</span></div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:9727620310">Call Johnson Renovations — 972-762-0310</a>
+
+<script>
+const buttons=document.querySelectorAll('.filter');
+const items=document.querySelectorAll('.project');
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+  buttons.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const f=btn.dataset.filter;
+  items.forEach(i=>i.style.display=(f==='all'||i.classList.contains(f))?'block':'none');
+}));
+const reviewGrid=document.getElementById('reviewsGrid');
+const toggleReviews=document.getElementById('toggleReviews');
+toggleReviews.addEventListener('click',()=>{
+  reviewGrid.classList.toggle('show-all');
+  toggleReviews.textContent=reviewGrid.classList.contains('show-all')?'Show Fewer Reviews':'Show All 44 Reviews';
+});
+</script>
+</body>
+</html>
