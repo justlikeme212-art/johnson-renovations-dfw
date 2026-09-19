@@ -7,10 +7,13 @@
   <title>Johnson Renovations | DFW Remodeling & General Contracting</title>
   <style>
     :root{
-      --ink:#30363b;
-      --charcoal:#30363b;
+      --ink:#273038;
+      --charcoal:#222a30;
       --blue:#1387a8;
       --blue2:#57b4d6;
+      --gold:#b99558;
+      --gold-soft:#d5bd8a;
+      --cream:#f5f2ec;
       --soft-blue:#eef7fa;
       --gray:#737b80;
       --light-gray:#f4f6f7;
@@ -22,13 +25,13 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f7f8f8;line-height:1.6}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{width:min(1180px,92%);margin:auto}
     .topbar{background:var(--charcoal);color:#fff;font-size:.9rem;padding:.58rem 0}
     .topbar .container{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    header{position:sticky;top:0;z-index:40;background:rgba(247,248,248,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
     nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
     .brand{display:flex;align-items:center;gap:.85rem;font-weight:900;letter-spacing:-.03em}
     .brand-logo{height:58px;width:auto;max-width:340px;object-fit:contain;display:block}
@@ -38,11 +41,11 @@
     .navlinks{display:flex;gap:1.25rem;align-items:center;font-size:.94rem;font-weight:750}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.92rem 1.22rem;border-radius:999px;font-weight:850;border:1px solid transparent;transition:.2s}
     .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#0f7694;transform:translateY(-2px)}
-    .btn-dark{background:var(--charcoal);color:#fff}.btn-dark:hover{background:#20262a;transform:translateY(-2px)}
+    .btn-dark{background:var(--charcoal);color:#fff;border-color:rgba(185,149,88,.45)}.btn-dark:hover{background:#20262a;transform:translateY(-2px)}
     .btn-outline{border-color:rgba(255,255,255,.55);color:#fff}.btn-outline:hover{background:#fff;color:var(--ink)}
-    .hero{min-height:720px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(34,42,47,.78),rgba(34,42,47,.52) 48%,rgba(34,42,47,.20)),url('assets/hero-user-kitchen.webp') center center/cover no-repeat;color:#fff}
+    .hero{min-height:720px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(22,28,33,.86),rgba(22,28,33,.62) 48%,rgba(22,28,33,.24)),url('assets/hero-user-kitchen.webp') center 48%/cover no-repeat;color:#fff}
     .hero-content{max-width:760px;padding:6rem 0}
-    .eyebrow{color:#8bd0e7;text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:850}
+    .eyebrow{color:var(--gold-soft);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:850}
     h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.055em;margin:.4rem 0 1.3rem}
     .hero p{font-size:clamp(1.05rem,2vw,1.27rem);max-width:690px;color:#f0f3f3}
     .hero h1,.hero p,.hero .eyebrow{text-shadow:0 2px 16px rgba(0,0,0,.25)}
@@ -50,37 +53,38 @@
     .trust-row{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem}
     .trust-row strong{display:block;font-size:1.5rem}
     section{padding:88px 0}
-    .section-kicker{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
+    .section-kicker{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
     h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.02;letter-spacing:-.045em;margin:.5rem 0 1rem}
     .lead{font-size:1.08rem;color:var(--muted);max-width:780px}
     .split{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
-    .photo-stack{position:relative;min-height:520px}
-    .photo-stack img{position:absolute;border-radius:var(--radius);box-shadow:var(--shadow);object-fit:cover}
-    .photo-stack img:first-child{width:78%;height:430px;left:0;top:0}
-    .photo-stack img:last-child{width:58%;height:300px;right:0;bottom:0;border:8px solid #fff}
+    .photo-stack{display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:1fr 1fr;gap:12px;min-height:500px}
+    .photo-stack img{width:100%;height:100%;border-radius:var(--radius);box-shadow:var(--shadow);object-fit:cover;border:1px solid rgba(185,149,88,.22)}
+    .photo-stack img:first-child{grid-row:1 / 3;min-height:500px}
+    .photo-stack img:nth-child(2){min-height:244px}
+    .photo-stack img:nth-child(3){min-height:244px}
     .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin:1.5rem 0}
     .check{padding:.8rem 1rem;background:var(--cream);border-radius:14px;font-weight:750}
-    .services{background:linear-gradient(180deg,#fff 0%, var(--soft-blue) 100%)}
+    .services{background:linear-gradient(180deg,#f7f8f8 0%,#e9eff2 100%)}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem}
-    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.5rem;transition:.2s}
+    .card{background:#fff;border:1px solid #d8dde0;border-top:2px solid rgba(185,149,88,.55);border-radius:18px;padding:1.5rem;transition:.2s}
     .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .icon{font-size:1.55rem}.card h3{font-size:1.17rem;margin:.45rem 0}.card p{color:var(--muted);font-size:.95rem;margin:0}
-    .houzz{background:var(--charcoal);color:#fff}
+    .houzz{background:linear-gradient(145deg,#20282e,#2b343a);color:#fff;border-top:1px solid rgba(185,149,88,.35);border-bottom:1px solid rgba(185,149,88,.35)}
     .houzz .lead{color:#cad1cd}
     .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin:2rem 0}
     .stat{padding:1.35rem;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.05);text-align:center}
-    .stat strong{display:block;font-size:2rem;color:#77c4df;line-height:1}.stat span{font-size:.86rem;color:#d7ddda}
+    .stat strong{display:block;font-size:2rem;color:var(--gold-soft);line-height:1}.stat span{font-size:.86rem;color:#d7ddda}
     .badges{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.6rem 0}
     .badge{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1rem;border-radius:999px;background:#fff;color:var(--ink);font-weight:850}
     .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
     .review{background:#fff;color:var(--ink);padding:1.4rem;border-radius:18px}
-    .stars{color:var(--blue);letter-spacing:.08em;font-weight:900}
+    .stars{color:var(--gold);letter-spacing:.08em;font-weight:900}
     .review p{font-size:1.03rem}.review small{color:var(--muted)}
     .projects-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:1rem;margin-top:2rem}
     .project-main,.project-small{overflow:hidden;border-radius:var(--radius);position:relative;background:#ddd}
     .project-main{min-height:520px}.project-small{min-height:250px}.project-side{display:grid;gap:1rem}
     .projects-grid img{width:100%;height:100%;object-fit:cover;transition:.35s}.projects-grid div:hover img{transform:scale(1.035)}
-    .caption{position:absolute;left:18px;bottom:18px;background:rgba(15,22,20,.82);color:#fff;padding:.65rem .85rem;border-radius:12px;font-weight:800}
+    .caption{position:absolute;left:18px;bottom:18px;background:rgba(25,31,35,.88);border:1px solid rgba(185,149,88,.45);color:#fff;padding:.65rem .85rem;border-radius:12px;font-weight:800}
     .albums{background:#fff}
     .album-tabs{display:flex;gap:.65rem;flex-wrap:wrap;margin:2rem 0 1.5rem}
     .album-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.75rem 1rem;border-radius:999px;font:inherit;font-weight:800;cursor:pointer;transition:.2s}
@@ -98,7 +102,7 @@
     .before-after-card{overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 30px rgba(48,54,59,.08)}
     .before-after-card img{width:100%;height:auto;display:block}
     .before-after-card p{margin:0;padding:.85rem 1rem;font-weight:800;color:var(--ink)}
-    .process{background:var(--light-gray)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+    .process{background:#e9edef}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
     .step{padding:1.5rem;border:1px solid var(--line);border-radius:18px;background:#fff}.step span{font-size:2rem;font-weight:950;color:var(--gold)}
     .areas{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}.pill{padding:.55rem .8rem;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem}
     .cta{background:linear-gradient(135deg,#eaf6fa,#d8eff7);border:1px solid #c7e6f0;border-radius:28px;padding:3rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem}
@@ -109,15 +113,15 @@
     form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     input,textarea,select{width:100%;padding:1rem;border:1px solid #d7d8d4;border-radius:13px;font:inherit;background:#fff;color:var(--ink)}
     textarea{min-height:150px;resize:vertical;grid-column:1/-1}.full{grid-column:1/-1}
-    footer{background:var(--charcoal);color:#e6edf0;padding:2.2rem 0;margin-top:80px}footer .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    footer{background:#1d2429;color:#e6edf0;padding:2.2rem 0;margin-top:80px}footer .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     .social-links{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-top:1rem}
     .social-link{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-weight:800;transition:.2s}
     .social-link:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
     .social-link.light{border-color:var(--line);background:#fff;color:var(--ink)}
     .social-link.light:hover{box-shadow:var(--shadow)}
     .mobile-call{display:none}
-    @media(max-width:900px){.navlinks{display:none}.split,.contact-grid,.projects-grid,.cta{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.project-main{min-height:360px}.photo-stack{min-height:450px}}
-    @media(max-width:620px){.before-after-grid{grid-template-columns:1fr}.album-grid{columns:1}.album-title-row{align-items:start;flex-direction:column;gap:.25rem}.brand-logo{height:48px;max-width:250px}.topbar .container{justify-content:center;text-align:center}.brand small{display:none}.hero{min-height:640px;background-position:58% center}.hero-content{padding:4rem 0}.cards,.reviews,.stats,.steps,.check-grid,form{grid-template-columns:1fr}textarea,.full{grid-column:auto}.photo-stack{min-height:380px}.photo-stack img:first-child{height:310px;width:86%}.photo-stack img:last-child{height:210px;width:62%}section{padding:68px 0}.desktop-quote{display:none}.mobile-call{display:inline-flex}.cta{padding:2rem}}
+    @media(max-width:900px){.navlinks{display:none}.split,.contact-grid,.projects-grid,.cta{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.project-main{min-height:360px}.photo-stack{min-height:430px}}
+    @media(max-width:620px){.before-after-grid{grid-template-columns:1fr}.album-grid{columns:1}.album-title-row{align-items:start;flex-direction:column;gap:.25rem}.brand-logo{height:48px;max-width:250px}.topbar .container{justify-content:center;text-align:center}.brand small{display:none}.hero{min-height:640px;background-position:58% center}.hero-content{padding:4rem 0}.cards,.reviews,.stats,.steps,.check-grid,form{grid-template-columns:1fr}textarea,.full{grid-column:auto}.photo-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;min-height:0}.photo-stack img:first-child{grid-column:1/-1;grid-row:auto;min-height:300px}.photo-stack img:nth-child(2),.photo-stack img:nth-child(3){min-height:180px}section{padding:68px 0}.desktop-quote{display:none}.mobile-call{display:inline-flex}.cta{padding:2rem}}
   </style>
 </head>
 <body>
@@ -161,6 +165,7 @@
         <div class="photo-stack">
           <img src="assets/project-bath-green-cabinet.webp" alt="Green bathroom remodel with soaking tub">
           <img src="assets/project-kitchen-mint-galley.webp" alt="Light green galley kitchen remodel">
+          <img src="assets/gallery/kitchens/kitchen-02.webp" alt="Johnson Renovations custom kitchen project">
         </div>
       </div>
     </section>
@@ -237,39 +242,31 @@
           <button class="album-tab" type="button" data-album="before-after">Before &amp; After</button>
         </div>
         <div class="album-panel active" id="album-kitchens">
-          <div class="album-title-row"><h3>Kitchens &amp; Custom Cabinetry</h3><span class="album-count">18 project photos</span></div>
+          <div class="album-title-row"><h3>Kitchens &amp; Custom Cabinetry</h3><span class="album-count">12 additional project photos</span></div>
           <div class="album-grid">
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-01.webp" alt="Johnson Renovations kitchen and cabinetry project 1"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-02.webp" alt="Johnson Renovations kitchen and cabinetry project 2"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-03.webp" alt="Johnson Renovations kitchen and cabinetry project 3"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-04.webp" alt="Johnson Renovations kitchen and cabinetry project 4"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-05.webp" alt="Johnson Renovations kitchen and cabinetry project 5"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-06.webp" alt="Johnson Renovations kitchen and cabinetry project 6"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-07.webp" alt="Johnson Renovations kitchen and cabinetry project 7"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-08.webp" alt="Johnson Renovations kitchen and cabinetry project 8"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-09.webp" alt="Johnson Renovations kitchen and cabinetry project 9"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-10.webp" alt="Johnson Renovations kitchen and cabinetry project 10"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-11.webp" alt="Johnson Renovations kitchen and cabinetry project 11"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-12.webp" alt="Johnson Renovations kitchen and cabinetry project 12"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-13.webp" alt="Johnson Renovations kitchen and cabinetry project 13"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-14.webp" alt="Johnson Renovations kitchen and cabinetry project 14"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-15.webp" alt="Johnson Renovations kitchen and cabinetry project 15"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-16.webp" alt="Johnson Renovations kitchen and cabinetry project 16"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-17.webp" alt="Johnson Renovations kitchen and cabinetry project 17"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-18.webp" alt="Johnson Renovations kitchen and cabinetry project 18"></figure>
           </div>
         </div>
         <div class="album-panel" id="album-bathrooms">
-          <div class="album-title-row"><h3>Bathroom Remodels</h3><span class="album-count">10 project photos</span></div>
+          <div class="album-title-row"><h3>Bathroom Remodels</h3><span class="album-count">8 additional project photos</span></div>
           <div class="album-grid">
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-01.webp" alt="Johnson Renovations bathroom remodel project 1"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-02.webp" alt="Johnson Renovations bathroom remodel project 2"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-03.webp" alt="Johnson Renovations bathroom remodel project 3"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-04.webp" alt="Johnson Renovations bathroom remodel project 4"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-05.webp" alt="Johnson Renovations bathroom remodel project 5"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-06.webp" alt="Johnson Renovations bathroom remodel project 6"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-07.webp" alt="Johnson Renovations bathroom remodel project 7"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-08.webp" alt="Johnson Renovations bathroom remodel project 8"></figure>
             <figure class="album-item"><img loading="lazy" src="images/IMG_2820.jpg" alt="Johnson Renovations bathroom remodel project 9"></figure>
             <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-10.webp" alt="Johnson Renovations bathroom remodel project 10"></figure>
           </div>
