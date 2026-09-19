@@ -113,6 +113,14 @@
     form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     input,textarea,select{width:100%;padding:1rem;border:1px solid #d7d8d4;border-radius:13px;font:inherit;background:#fff;color:var(--ink)}
     textarea{min-height:150px;resize:vertical;grid-column:1/-1}.full{grid-column:1/-1}
+    .map-section{padding:72px 0;background:var(--light-gray)}
+    .map-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem;align-items:stretch}
+    .map-info{background:var(--charcoal);color:#fff;border-radius:var(--radius);padding:2rem}
+    .map-info h2{margin-top:.35rem}
+    .map-info p{color:#d9e1e5}
+    .map-frame{min-height:430px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .map-frame iframe{width:100%;height:100%;min-height:430px;border:0;display:block}
+    @media(max-width:900px){.map-wrap{grid-template-columns:1fr}}
     footer{background:#1d2429;color:#e6edf0;padding:2.2rem 0;margin-top:80px}footer .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     .social-links{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-top:1rem}
     .social-link{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-weight:800;transition:.2s}
@@ -137,7 +145,7 @@
     <nav class="container">
       <a class="brand" href="#home" aria-label="Johnson Renovations home"><img class="brand-logo" src="assets/johnson-renovations-logo.webp" alt="Johnson Renovations"></a>
       <div class="navlinks"><a href="#services">Services</a><a href="#houzz">Reviews</a><a href="#projects">Projects</a><a href="#albums">Albums</a><a href="#areas">Areas</a><a href="#contact">Contact</a></div>
-      <a class="btn btn-dark desktop-quote" href="#contact">Free Estimate</a>
+      <a class="btn btn-dark desktop-quote" href="#contact">Book a Consultation</a>
       <a class="btn btn-dark mobile-call" href="tel:2145360093">Call Now</a>
     </nav>
   </header>
@@ -148,7 +156,7 @@
         <div class="eyebrow">Remodeling - Carpentry - The Unexpected</div>
         <h1>Our goal is to give you the best renovation experience</h1>
         <p>Our dream is to make your dream reality</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Request a Free Estimate</a><a class="btn btn-outline" href="tel:2145360093">Call 214-536-0093</a></div>
+        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Book a Consultation</a><a class="btn btn-outline" href="tel:2145360093">Call 214-536-0093</a></div>
         <div class="trust-row"><div><strong>25 Years</strong>Serving homeowners</div><div><strong>5-Star</strong>Houzz rating</div><div><strong>Full Service</strong>Design through completion</div></div>
       </div></div>
     </section>
@@ -309,11 +317,32 @@
     <section>
       <div class="container"><div class="cta">
         <div><h2>Ready to renovate?</h2><p>Tell Johnson Renovations what you have in mind and start the conversation about your next home project.</p></div>
-        <a class="btn btn-dark" href="#contact">Get a Free Estimate</a>
+        <a class="btn btn-dark" href="#contact">Book a Consultation</a>
       </div></div>
     </section>
 
-    <section id="contact">
+    
+    <section class="map-section" id="location-map">
+      <div class="container map-wrap">
+        <div class="map-info">
+          <div class="section-kicker" style="color:var(--gold)">Visit Johnson Renovations</div>
+          <h2>Find us in Farmers Branch.</h2>
+          <p>3331 Towerwood Dr, #307, Farmers Branch, TX</p>
+          <p><strong>Mon–Fri:</strong> 8:00 AM–6:00 PM<br><strong>Saturday:</strong> 10:00 AM–3:00 PM<br><strong>Sunday:</strong> Closed</p>
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=3331+Towerwood+Dr+%23307+Farmers+Branch+TX">Get Directions</a>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title="Johnson Renovations location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=3331+Towerwood+Dr+%23307+Farmers+Branch+TX&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+<section id="contact">
       <div class="container contact-grid">
         <div class="contact-card">
           <div class="section-kicker" style="color:var(--blue2)">Contact</div>
@@ -336,7 +365,7 @@
           </div>
         </div>
         <div>
-          <div class="section-kicker">Free Estimate</div><h2 style="font-size:2.8rem">Tell us what you’re planning.</h2>
+          <div class="section-kicker">Book a Consultation</div><h2 style="font-size:2.8rem">Tell us what you’re planning.</h2>
           <form action="mailto:johnsonrenovationsdfw@gmail.com" method="post" enctype="text/plain">
             <input name="Name" aria-label="Name" placeholder="Your name" required>
             <input name="Phone" aria-label="Phone" placeholder="Phone number" required>
