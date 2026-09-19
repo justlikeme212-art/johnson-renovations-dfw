@@ -80,10 +80,10 @@
     .review{background:#fff;color:var(--ink);padding:1.4rem;border-radius:18px}
     .stars{color:var(--gold);letter-spacing:.08em;font-weight:900}
     .review p{font-size:1.03rem}.review small{color:var(--muted)}
-    .projects-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:1rem;margin-top:2rem}
-    .project-main,.project-small{overflow:hidden;border-radius:var(--radius);position:relative;background:#ddd}
-    .project-main{min-height:520px}.project-small{min-height:250px}.project-side{display:grid;gap:1rem}
-    .projects-grid img{width:100%;height:100%;object-fit:cover;transition:.35s}.projects-grid div:hover img{transform:scale(1.035)}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+    .project-main,.project-small{overflow:hidden;border-radius:var(--radius);position:relative;background:#ddd;height:300px;min-height:0}
+    .project-side{display:contents}
+    .projects-grid img{width:100%;height:100%;object-fit:cover;object-position:center;transition:.35s}.projects-grid div:hover img{transform:scale(1.025)}
     .caption{position:absolute;left:18px;bottom:18px;background:rgba(25,31,35,.88);border:1px solid rgba(185,149,88,.45);color:#fff;padding:.65rem .85rem;border-radius:12px;font-weight:800}
     .albums{background:#fff}
     .album-tabs{display:flex;gap:.65rem;flex-wrap:wrap;margin:2rem 0 1.5rem}
@@ -120,8 +120,8 @@
     .social-link.light{border-color:var(--line);background:#fff;color:var(--ink)}
     .social-link.light:hover{box-shadow:var(--shadow)}
     .mobile-call{display:none}
-    @media(max-width:900px){.navlinks{display:none}.split,.contact-grid,.projects-grid,.cta{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.project-main{min-height:360px}.photo-stack{min-height:430px}}
-    @media(max-width:620px){.before-after-grid{grid-template-columns:1fr}.album-grid{columns:1}.album-title-row{align-items:start;flex-direction:column;gap:.25rem}.brand-logo{height:48px;max-width:250px}.topbar .container{justify-content:center;text-align:center}.brand small{display:none}.hero{min-height:640px;background-position:58% center}.hero-content{padding:4rem 0}.cards,.reviews,.stats,.steps,.check-grid,form{grid-template-columns:1fr}textarea,.full{grid-column:auto}.photo-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;min-height:0}.photo-stack img:first-child{grid-column:1/-1;grid-row:auto;min-height:300px}.photo-stack img:nth-child(2),.photo-stack img:nth-child(3){min-height:180px}section{padding:68px 0}.desktop-quote{display:none}.mobile-call{display:inline-flex}.cta{padding:2rem}}
+    @media(max-width:900px){.navlinks{display:none}.split,.contact-grid,.cta{grid-template-columns:1fr}.projects-grid{grid-template-columns:repeat(2,1fr)}.cards,.reviews{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.project-main,.project-small{height:260px}.photo-stack{min-height:430px}}
+    @media(max-width:620px){.before-after-grid{grid-template-columns:1fr}.album-grid{columns:1}.album-title-row{align-items:start;flex-direction:column;gap:.25rem}.brand-logo{height:48px;max-width:250px}.topbar .container{justify-content:center;text-align:center}.brand small{display:none}.hero{min-height:640px;background-position:58% center}.hero-content{padding:4rem 0}.projects-grid,.cards,.reviews,.stats,.steps,.check-grid,form{grid-template-columns:1fr}.project-main,.project-small{height:240px}textarea,.full{grid-column:auto}.photo-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;min-height:0}.photo-stack img:first-child{grid-column:1/-1;grid-row:auto;min-height:300px}.photo-stack img:nth-child(2),.photo-stack img:nth-child(3){min-height:180px}section{padding:68px 0}.desktop-quote{display:none}.mobile-call{display:inline-flex}.cta{padding:2rem}}
   </style>
 </head>
 <body>
@@ -221,6 +221,7 @@
         <p class="lead">Explore examples of kitchen, bath and custom renovation work from Johnson Renovations.</p>
         <div class="projects-grid">
           <div class="project-main"><img src="assets/project-kitchen-dark-wood-island.webp" alt="Modern kitchen with dark wood island"><div class="caption">Kitchen Remodeling</div></div>
+          <div class="project-small"><img src="assets/gallery/kitchens/kitchen-01.webp" alt="White traditional kitchen remodel"><div class="caption">Kitchen Renovation</div></div>
           <div class="project-side">
             <div class="project-small"><img src="assets/project-bath-arched-shower.webp" alt="Bathroom remodel with arched marble shower"><div class="caption">Bathroom Remodeling</div></div>
             <div class="project-small"><img src="assets/project-kitchen-traditional-island.webp" alt="Traditional kitchen with large island"><div class="caption">Kitchen Transformation</div></div>
