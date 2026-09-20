@@ -3,281 +3,359 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Johnson Renovations provides home remodeling, kitchen and bathroom remodeling, general contracting, additions, decks, flooring, roofing and more throughout Dallas–Fort Worth." />
+  <meta name="description" content="Johnson Renovations provides home remodeling, kitchen and bathroom remodeling, general contracting, additions, carpentry and more throughout Dallas–Fort Worth." />
   <title>Johnson Renovations | DFW Remodeling & General Contracting</title>
   <style>
     :root{
-      --ink:#273038;
-      --charcoal:#222a30;
+      --charcoal:#1d252b;
+      --charcoal-2:#273138;
+      --ink:#263038;
       --blue:#1387a8;
-      --blue2:#57b4d6;
+      --blue-2:#57b4d6;
       --gold:#b99558;
-      --gold-soft:#d5bd8a;
-      --cream:#f5f2ec;
-      --soft-blue:#eef7fa;
-      --gray:#737b80;
-      --light-gray:#f4f6f7;
-      --white:#ffffff;
-      --muted:#687177;
-      --line:#dbe2e5;
-      --shadow:0 18px 45px rgba(48,54,59,.14);
-      --radius:22px;
+      --gold-soft:#d7c19a;
+      --cream:#f4f0e8;
+      --paper:#f7f8f8;
+      --white:#fff;
+      --muted:#6c777e;
+      --line:#d9dfe2;
+      --shadow:0 18px 45px rgba(26,34,39,.14);
+      --radius:24px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f7f8f8;line-height:1.6}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    img{display:block;max-width:100%}
     .container{width:min(1180px,92%);margin:auto}
-    .topbar{background:var(--charcoal);color:#fff;font-size:.9rem;padding:.58rem 0}
-    .topbar .container{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:40;background:rgba(247,248,248,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .brand{display:flex;align-items:center;gap:.85rem;font-weight:900;letter-spacing:-.03em}
-    .brand-logo{height:58px;width:auto;max-width:340px;object-fit:contain;display:block}
-    .brand-text{display:none}
-    .mark{display:none}
-    .brand small{display:block;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .navlinks{display:flex;gap:1.25rem;align-items:center;font-size:.94rem;font-weight:750}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.92rem 1.22rem;border-radius:999px;font-weight:850;border:1px solid transparent;transition:.2s}
-    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#0f7694;transform:translateY(-2px)}
-    .btn-dark{background:var(--charcoal);color:#fff;border-color:rgba(185,149,88,.45)}.btn-dark:hover{background:#20262a;transform:translateY(-2px)}
-    .btn-outline{border-color:rgba(255,255,255,.55);color:#fff}.btn-outline:hover{background:#fff;color:var(--ink)}
-    .hero{min-height:720px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(22,28,33,.86),rgba(22,28,33,.62) 48%,rgba(22,28,33,.24)),url('assets/hero-user-kitchen.webp') center 48%/cover no-repeat;color:#fff}
-    .hero-content{max-width:760px;padding:6rem 0}
-    .eyebrow{color:var(--gold-soft);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:850}
-    h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.055em;margin:.4rem 0 1.3rem}
-    .hero p{font-size:clamp(1.05rem,2vw,1.27rem);max-width:690px;color:#f0f3f3}
-    .hero h1,.hero p,.hero .eyebrow{text-shadow:0 2px 16px rgba(0,0,0,.25)}
+    .eyebrow,.section-kicker{font-size:.76rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    h1,h2,h3{margin-top:0}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.35rem,7.4vw,6.8rem);line-height:.92;letter-spacing:-.055em;margin:.45rem 0 1.2rem}
+    h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.15rem,4.4vw,4.35rem);line-height:1;letter-spacing:-.045em;margin:.5rem 0 1rem}
+    h3{font-family:Georgia,"Times New Roman",serif}
+    .lead{font-size:1.08rem;color:var(--muted);max-width:760px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.95rem 1.3rem;border-radius:999px;border:1px solid transparent;font-weight:850;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:#0f7390}
+    .btn-dark{background:var(--charcoal);color:#fff;border-color:rgba(185,149,88,.45)}
+    .btn-light{background:#fff;color:var(--charcoal);border-color:#fff}
+    .topbar{background:#151b1f;color:#dfe5e8;font-size:.88rem}
+    .topbar .container{min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:50;background:rgba(247,248,248,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(29,37,43,.08)}
+    nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .brand-logo{height:58px;width:auto;max-width:330px;object-fit:contain}
+    .navlinks{display:flex;align-items:center;gap:1.25rem;font-weight:800;font-size:.93rem}
+    .navlinks a:hover{color:var(--blue)}
+    .hero{min-height:760px;display:grid;align-items:center;color:#fff;background:
+      linear-gradient(90deg,rgba(19,24,28,.90) 0%,rgba(19,24,28,.72) 42%,rgba(19,24,28,.28) 74%,rgba(19,24,28,.12) 100%),
+      url('assets/hero-user-kitchen.webp') center 48%/cover no-repeat}
+    .hero-content{max-width:780px;padding:7rem 0}
+    .hero .eyebrow{color:var(--gold-soft)}
+    .hero p{font-size:clamp(1.08rem,2vw,1.28rem);color:#edf2f3;max-width:670px}
     .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
-    .trust-row{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem}
-    .trust-row strong{display:block;font-size:1.5rem}
-    section{padding:88px 0}
-    .section-kicker{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
-    h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.02;letter-spacing:-.045em;margin:.5rem 0 1rem}
-    .lead{font-size:1.08rem;color:var(--muted);max-width:780px}
-    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
-    .photo-stack{display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:1fr 1fr;gap:12px;min-height:500px}
-    .photo-stack img{width:100%;height:100%;border-radius:var(--radius);box-shadow:var(--shadow);object-fit:cover;border:1px solid rgba(185,149,88,.22)}
-    .photo-stack img:first-child{grid-row:1 / 3;min-height:500px}
-    .photo-stack img:nth-child(2){min-height:244px}
-    .photo-stack img:nth-child(3){min-height:244px}
-    .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin:1.5rem 0}
-    .check{padding:.8rem 1rem;background:var(--cream);border-radius:14px;font-weight:750}
-    .services{background:linear-gradient(180deg,#f7f8f8 0%,#e9eff2 100%)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem}
-    .card{background:#fff;border:1px solid #d8dde0;border-top:2px solid rgba(185,149,88,.55);border-radius:18px;padding:1.5rem;transition:.2s}
-    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .icon{font-size:1.55rem}.card h3{font-size:1.17rem;margin:.45rem 0}.card p{color:var(--muted);font-size:.95rem;margin:0}
-    .houzz{background:linear-gradient(145deg,#20282e,#2b343a);color:#fff;border-top:1px solid rgba(185,149,88,.35);border-bottom:1px solid rgba(185,149,88,.35)}
-    .houzz .lead{color:#cad1cd}
+    .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18);border-radius:18px;overflow:hidden;max-width:720px}
+    .trust-row div{padding:1.1rem 1.25rem;background:rgba(13,18,21,.46);backdrop-filter:blur(8px)}
+    .trust-row strong{display:block;color:var(--gold-soft);font-size:1.25rem}
+    section{padding:96px 0}
+    .intro{background:#fff}
+    .intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:4rem;align-items:center}
+    .intro-copy{max-width:560px}
+    .intro-rule{width:72px;height:2px;background:var(--gold);margin:1.4rem 0}
+    .photo-mosaic{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:240px 240px;gap:14px}
+    .photo-mosaic img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+    .photo-mosaic img:first-child{grid-row:1/3}
+    .services{background:var(--cream)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.2rem}
+    .section-head .lead{margin-bottom:.2rem}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .service-card{background:#fff;border:1px solid rgba(38,48,56,.1);border-radius:18px;padding:1.6rem;min-height:210px;position:relative;overflow:hidden;transition:.2s}
+    .service-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--blue))}
+    .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .service-num{font-weight:900;color:var(--gold);font-size:.76rem;letter-spacing:.12em}
+    .service-card h3{font-size:1.35rem;margin:.75rem 0 .5rem}
+    .service-card p{color:var(--muted);margin:0}
+    .projects{background:var(--charcoal);color:#fff}
+    .projects .lead{color:#cbd3d6}
+    .projects-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:2.2rem}
+    .project{position:relative;overflow:hidden;border-radius:20px;min-height:280px;background:#111}
+    .project:nth-child(1){grid-column:span 5}
+    .project:nth-child(2){grid-column:span 3}
+    .project:nth-child(3){grid-column:span 4}
+    .project:nth-child(4){grid-column:span 4}
+    .project:nth-child(5){grid-column:span 4}
+    .project:nth-child(6){grid-column:span 4}
+    .project img{width:100%;height:100%;object-fit:cover;object-position:center;transition:.35s}
+    .project:hover img{transform:scale(1.025)}
+    .project-label{position:absolute;left:14px;bottom:14px;padding:.62rem .82rem;background:rgba(18,24,28,.88);border:1px solid rgba(185,149,88,.45);border-radius:10px;font-weight:800}
+    .why{background:#fff}
+    .why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+    .why-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .why-card{padding:1.35rem;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+    .why-card span{display:block;color:var(--gold);font-weight:900;margin-bottom:.45rem}
+    .why-card h3{margin:.2rem 0 .45rem;font-size:1.18rem}
+    .why-card p{margin:0;color:var(--muted);font-size:.95rem}
+    .houzz{background:linear-gradient(145deg,#20282e,#2c373e);color:#fff}
+    .houzz .lead{color:#cbd3d6}
     .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin:2rem 0}
-    .stat{padding:1.35rem;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.05);text-align:center}
-    .stat strong{display:block;font-size:2rem;color:var(--gold-soft);line-height:1}.stat span{font-size:.86rem;color:#d7ddda}
-    .badges{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.6rem 0}
-    .badge{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1rem;border-radius:999px;background:#fff;color:var(--ink);font-weight:850}
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
-    .review{background:#fff;color:var(--ink);padding:1.4rem;border-radius:18px}
-    .stars{color:var(--gold);letter-spacing:.08em;font-weight:900}
-    .review p{font-size:1.03rem}.review small{color:var(--muted)}
-    .projects-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:1rem;margin-top:2rem}
-    .project-main,.project-small{overflow:hidden;border-radius:var(--radius);position:relative;background:#ddd}
-    .project-main{min-height:520px}.project-small{min-height:250px}.project-side{display:grid;gap:1rem}
-    .projects-grid img{width:100%;height:100%;object-fit:cover;transition:.35s}.projects-grid div:hover img{transform:scale(1.035)}
-    .caption{position:absolute;left:18px;bottom:18px;background:rgba(25,31,35,.88);border:1px solid rgba(185,149,88,.45);color:#fff;padding:.65rem .85rem;border-radius:12px;font-weight:800}
+    .stat{padding:1.35rem 1rem;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.05);text-align:center}
+    .stat strong{display:block;color:var(--gold-soft);font-size:1.9rem}
+    .stat span{font-size:.84rem;color:#d8dfe2}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+    .review{background:#fff;color:var(--ink);border-radius:16px;padding:1.35rem}
+    .stars{color:var(--gold);letter-spacing:.08em}
+    .review p{font-family:Georgia,"Times New Roman",serif;font-size:1.12rem}
+    .review small{color:var(--muted)}
     .albums{background:#fff}
-    .album-tabs{display:flex;gap:.65rem;flex-wrap:wrap;margin:2rem 0 1.5rem}
-    .album-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.75rem 1rem;border-radius:999px;font:inherit;font-weight:800;cursor:pointer;transition:.2s}
-    .album-tab:hover,.album-tab.active{background:var(--blue);border-color:var(--blue);color:#fff}
-    .album-panel{display:none}
-    .album-panel.active{display:block}
-    .album-title-row{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin:0 0 1rem}
+    .album-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.8rem 0 1.4rem}
+    .album-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.75rem 1rem;border-radius:999px;font:inherit;font-weight:800;cursor:pointer}
+    .album-tab.active,.album-tab:hover{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+    .album-panel{display:none}.album-panel.active{display:block}
+    .album-title-row{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1rem}
     .album-title-row h3{font-size:1.6rem;margin:0}
-    .album-count{color:var(--muted);font-size:.92rem}
+    .album-count{color:var(--muted)}
     .album-grid{columns:3 280px;column-gap:1rem}
-    .album-item{break-inside:avoid;margin:0 0 1rem;border-radius:16px;overflow:hidden;background:var(--light-gray);border:1px solid var(--line)}
-    .album-item img{width:100%;height:auto;display:block;transition:transform .3s ease}
-    .album-item:hover img{transform:scale(1.015)}
+    .album-item{break-inside:avoid;margin:0 0 1rem;border-radius:14px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+    .album-item img{width:100%;height:auto}
     .before-after-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .before-after-card{overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 30px rgba(48,54,59,.08)}
-    .before-after-card img{width:100%;height:auto;display:block}
-    .before-after-card p{margin:0;padding:.85rem 1rem;font-weight:800;color:var(--ink)}
-    .process{background:#e9edef}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
-    .step{padding:1.5rem;border:1px solid var(--line);border-radius:18px;background:#fff}.step span{font-size:2rem;font-weight:950;color:var(--gold)}
-    .areas{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}.pill{padding:.55rem .8rem;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem}
-    .cta{background:linear-gradient(135deg,#eaf6fa,#d8eff7);border:1px solid #c7e6f0;border-radius:28px;padding:3rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem}
-    .cta h2{font-size:clamp(2rem,4vw,3.4rem);margin:0 0 .7rem}.cta p{margin:0;max-width:700px}
-    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem}
-    .contact-card{background:var(--ink);color:#fff;border-radius:var(--radius);padding:2rem}.contact-card a{display:block;margin:.7rem 0}
-    .business-hours{margin-top:1.35rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.18);display:grid;gap:.35rem}.business-hours strong{color:var(--blue2);font-size:.95rem}.business-hours span{color:#eef4f6;font-size:.94rem}
+    .before-after-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    .before-after-card p{padding:.85rem 1rem;margin:0;font-weight:800}
+    .process{background:var(--cream)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+    .step{padding:1.45rem;background:#fff;border:1px solid rgba(38,48,56,.1);border-radius:16px}
+    .step span{font-size:1.8rem;font-weight:900;color:var(--gold)}
+    .areas-section{background:#fff}
+    .areas{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+    .pill{padding:.55rem .82rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.9rem}
+    .consult-band{background:var(--blue);color:#fff;padding:0}
+    .consult-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;padding:2.7rem 0}
+    .consult-inner h2{font-size:clamp(2rem,4vw,3.6rem);margin:0 0 .5rem}
+    .consult-inner p{margin:0;color:#eaf5f8}
+    .story-section{background:#fff}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .story-copy{max-width:620px}
+    .story-copy p{font-size:1.08rem;color:var(--muted);line-height:1.85}
+    .story-photo img{width:100%;height:520px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);border:1px solid rgba(185,149,88,.28)}
+    .map-section{background:#171e22;color:#fff}
+    .map-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:1.5rem;align-items:stretch}
+    .map-info{padding:1.4rem 1rem 1.4rem 0}
+    .map-info p{color:#d6dde0}
+    .map-frame{min-height:440px;overflow:hidden;border-radius:20px;border:1px solid rgba(185,149,88,.35)}
+    .map-frame iframe{width:100%;height:100%;min-height:440px;border:0}
+    .contact{background:#fff}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem}
+    .contact-card{background:var(--charcoal);color:#fff;padding:2rem;border-radius:20px}
+    .contact-card a{display:block;margin:.65rem 0}
+    .business-hours{margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.18)}
+    .business-hours span{display:block;color:#e7edef;margin:.25rem 0}
     form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    input,textarea,select{width:100%;padding:1rem;border:1px solid #d7d8d4;border-radius:13px;font:inherit;background:#fff;color:var(--ink)}
-    textarea{min-height:150px;resize:vertical;grid-column:1/-1}.full{grid-column:1/-1}
-    footer{background:#1d2429;color:#e6edf0;padding:2.2rem 0;margin-top:80px}footer .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-    .social-links{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-top:1rem}
-    .social-link{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-weight:800;transition:.2s}
-    .social-link:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
-    .social-link.light{border-color:var(--line);background:#fff;color:var(--ink)}
-    .social-link.light:hover{box-shadow:var(--shadow)}
+    input,select,textarea{width:100%;padding:1rem;border:1px solid #d5dbde;border-radius:12px;background:#fff;color:var(--ink);font:inherit}
+    textarea{grid-column:1/-1;min-height:150px;resize:vertical}
+    .full{grid-column:1/-1}
+    .faq{background:var(--paper)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
+    summary{cursor:pointer;font-weight:850}
+    details p{color:var(--muted);margin:.75rem 0 0}
+    footer{background:#11171a;color:#dfe5e7;padding:2rem 0}
+    footer .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .social-links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+    .social-link{padding:.55rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-weight:800}
     .mobile-call{display:none}
-    @media(max-width:900px){.navlinks{display:none}.split,.contact-grid,.projects-grid,.cta{grid-template-columns:1fr}.cards,.reviews{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.project-main{min-height:360px}.photo-stack{min-height:430px}}
-    @media(max-width:620px){.before-after-grid{grid-template-columns:1fr}.album-grid{columns:1}.album-title-row{align-items:start;flex-direction:column;gap:.25rem}.brand-logo{height:48px;max-width:250px}.topbar .container{justify-content:center;text-align:center}.brand small{display:none}.hero{min-height:640px;background-position:58% center}.hero-content{padding:4rem 0}.cards,.reviews,.stats,.steps,.check-grid,form{grid-template-columns:1fr}textarea,.full{grid-column:auto}.photo-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;min-height:0}.photo-stack img:first-child{grid-column:1/-1;grid-row:auto;min-height:300px}.photo-stack img:nth-child(2),.photo-stack img:nth-child(3){min-height:180px}section{padding:68px 0}.desktop-quote{display:none}.mobile-call{display:inline-flex}.cta{padding:2rem}}
+    @media(max-width:950px){.story-grid{grid-template-columns:1fr}.story-photo img{height:420px}
+      .navlinks{display:none}
+      .intro-grid,.why-grid,.contact-grid,.map-wrap{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(3,1fr)}
+      .reviews{grid-template-columns:1fr}
+      .project:nth-child(n){grid-column:span 6}
+      .map-info{padding-right:0}
+    }
+    @media(max-width:680px){.story-photo img{height:320px}
+      .topbar .container{justify-content:center;text-align:center}
+      .brand-logo{height:48px;max-width:250px}
+      .hero{min-height:650px;background-position:58% center}
+      .hero-content{padding:4.5rem 0}
+      .trust-row{grid-template-columns:1fr}
+      .intro-grid{gap:2rem}
+      .photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:260px 170px}
+      .photo-mosaic img:first-child{grid-column:1/-1;grid-row:auto}
+      .section-head{display:block}
+      .services-grid,.stats,.steps,.faq-grid,form{grid-template-columns:1fr}
+      .project:nth-child(n){grid-column:span 12;min-height:240px}
+      .album-grid{columns:1}
+      .before-after-grid{grid-template-columns:1fr}
+      .consult-inner{grid-template-columns:1fr}
+      textarea,.full{grid-column:auto}
+      section{padding:72px 0}
+      .desktop-quote{display:none}
+      .mobile-call{display:inline-flex}
+    }
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container">
-      <span>Serving the Dallas–Fort Worth area • 25 years of experience</span>
+      <span>Serving Dallas–Fort Worth • 25 years of experience</span>
       <span>Mon–Fri 8 AM–6 PM • Sat 10 AM–3 PM • Sun Closed</span>
-      <span><a href="tel:2145360093">214-536-0093</a> &nbsp;•&nbsp; <a href="mailto:johnsonrenovationsdfw@gmail.com">johnsonrenovationsdfw@gmail.com</a></span>
+      <span><a href="tel:2145360093">214-536-0093</a></span>
     </div>
   </div>
 
   <header>
     <nav class="container">
-      <a class="brand" href="#home" aria-label="Johnson Renovations home"><img class="brand-logo" src="assets/johnson-renovations-logo.webp" alt="Johnson Renovations"></a>
-      <div class="navlinks"><a href="#services">Services</a><a href="#houzz">Reviews</a><a href="#projects">Projects</a><a href="#albums">Albums</a><a href="#areas">Areas</a><a href="#contact">Contact</a></div>
-      <a class="btn btn-dark desktop-quote" href="#contact">Free Estimate</a>
+      <a href="#home" aria-label="Johnson Renovations home"><img class="brand-logo" src="assets/johnson-renovations-logo.webp" alt="Johnson Renovations"></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#albums">Albums</a>
+        <a href="#houzz">Reviews</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-dark desktop-quote" href="#contact">Book a Consultation</a>
       <a class="btn btn-dark mobile-call" href="tel:2145360093">Call Now</a>
     </nav>
   </header>
 
   <main id="home">
     <section class="hero">
-      <div class="container"><div class="hero-content">
-        <div class="eyebrow">Remodeling - Carpentry - The Unexpected</div>
-        <h1>Our goal is to give you the best renovation experience</h1>
-        <p>Our dream is to make your dream reality</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Request a Free Estimate</a><a class="btn btn-outline" href="tel:2145360093">Call 214-536-0093</a></div>
-        <div class="trust-row"><div><strong>25 Years</strong>Serving homeowners</div><div><strong>5-Star</strong>Houzz rating</div><div><strong>Full Service</strong>Design through completion</div></div>
-      </div></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Remodeling - Carpentry - The Unexpected</div>
+          <h1>Our goal is to give you the best renovation experience</h1>
+          <p>Our dream is to make your dream reality</p>
+          <div class="hero-actions">
+            <a class="btn btn-blue" href="#contact">Book a Consultation</a>
+            <a class="btn btn-light" href="#projects">View Our Work</a>
+          </div>
+          <div class="trust-row">
+            <div><strong>25 Years</strong>Serving homeowners</div>
+            <div><strong>5-Star</strong>Houzz rating</div>
+            <div><strong>Full Service</strong>Design through completion</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <div class="container split">
-        <div>
+    <section class="intro">
+      <div class="container intro-grid">
+        <div class="intro-copy">
           <div class="section-kicker">Johnson Renovations</div>
-          <h2>Our goal is to give you the best renovation experience.</h2>
-          <p class="lead">Our dream is to make your dream a reality. From a single-room update to a complete home renovation, we coordinate the work and stay involved throughout the project.</p>
-          <div class="check-grid"><div class="check">✓ Kitchen & bathroom remodeling</div><div class="check">✓ Additions & conversions</div><div class="check">✓ Carpentry & cabinetry</div><div class="check">✓ Roofing & exterior work</div><div class="check">✓ Flooring, tile & concrete</div><div class="check">✓ Project management & 3D rendering</div></div>
+          <h2>Thoughtful renovations. Built around your home.</h2>
+          <div class="intro-rule"></div>
+          <p class="lead">From single-room updates to complete home renovations, Johnson Renovations coordinates the details, trades and finishing work so the process feels clear from the first conversation through completion.</p>
           <a class="btn btn-dark" href="#services">Explore Services</a>
         </div>
-        <div class="photo-stack">
-          <img src="assets/project-bath-green-cabinet.webp" alt="Green bathroom remodel with soaking tub">
+        <div class="photo-mosaic">
+          <img src="assets/project-bath-green-cabinet.webp" alt="Green bathroom cabinetry and soaking tub remodel">
           <img src="assets/project-kitchen-mint-galley.webp" alt="Light green galley kitchen remodel">
-          <img src="assets/project-taupe-appliance-station.webp" alt="Custom kitchen appliance station and cabinetry by Johnson Renovations">
+          <img src="assets/gallery/kitchens/kitchen-02.webp" alt="Custom kitchen renovation">
         </div>
       </div>
     </section>
 
     <section class="services" id="services">
       <div class="container">
-        <div class="section-kicker">Services</div><h2>Remodeling from foundation to finish.</h2>
-        <p class="lead">One team for the major trades, finishing details and project coordination your renovation needs.</p>
-        <div class="cards">
-          <div class="card"><div class="icon">🏠</div><h3>Home Remodeling</h3><p>Whole-home renovations, home additions, attic conversions, garage conversions and general contracting.</p></div>
-          <div class="card"><div class="icon">🍽️</div><h3>Kitchen Remodeling</h3><p>Cabinetry, countertops, tile, lighting, flooring, carpentry and custom home bars.</p></div>
-          <div class="card"><div class="icon">🛁</div><h3>Bathroom Remodeling</h3><p>Showers, tile, plumbing coordination, lighting, flooring and complete bathroom updates.</p></div>
-          <div class="card"><div class="icon">🪚</div><h3>Carpentry & Custom Work</h3><p>Cabinetry, closets, fireplaces, workshop design and detailed finish carpentry.</p></div>
-          <div class="card"><div class="icon">🌿</div><h3>Outdoor Living</h3><p>Deck building and repair, porch construction, landscaping coordination and concrete construction.</p></div>
-          <div class="card"><div class="icon">🔨</div><h3>Roofing & Exterior</h3><p>Roof installation, replacement and repair, windows, exterior doors and exterior upgrades.</p></div>
-          <div class="card"><div class="icon">🧱</div><h3>Flooring & Surfaces</h3><p>Flooring installation, concrete flooring, tile installation and countertop installation.</p></div>
-          <div class="card"><div class="icon">💡</div><h3>Home Systems</h3><p>Lighting installation, plumbing coordination and water heater installation.</p></div>
-          <div class="card"><div class="icon">📐</div><h3>Planning & Management</h3><p>Project management and 3D rendering to help organize details before and during construction.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="houzz" id="houzz">
-      <div class="container">
-        <div class="section-kicker" style="color:#e0bd87">Houzz Recognition</div>
-        <h2>Trusted by DFW homeowners.</h2>
-        <p class="lead">Johnson Renovations has built a strong Houzz track record with completed projects, homeowner reviews and platform recognition.</p>
-        <div class="stats">
-          <div class="stat"><strong>5.0★</strong><span>Houzz rating</span></div>
-          <div class="stat"><strong>40+</strong><span>Houzz reviews</span></div>
-          <div class="stat"><strong>38</strong><span>Hires on Houzz</span></div>
-          <div class="stat"><strong>23</strong><span>Projects shown</span></div>
-          <div class="stat"><strong>9</strong><span>Awards + badges</span></div>
-        </div>
-        <div class="badges">
-          <span class="badge">🏆 6 Houzz Awards</span>
-          <span class="badge">✓ 3 Houzz Badges</span>
-          <span class="badge">📐 Provides 3D Visualization</span>
-          <span class="badge">📍 Locally Owned</span>
-        </div>
-        <div class="reviews">
-          <article class="review"><div class="stars">★★★★★</div><p>“Thorough and responsive.”</p><small>Kitchen remodeling client • Houzz</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“On budget and schedule.”</p><small>Kitchen & living room remodeling client • Houzz</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“Their craftsmanship was superb.”</p><small>Bathroom remodeling client • Houzz</small></article>
-        </div>
-        <p style="margin-top:1.6rem"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.houzz.com/pro/johnsonrenovationsdfw/johnson-renovations">View Johnson Renovations on Houzz ↗</a></p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-kicker">Featured Work</div><h2>Anything is possible with us.</h2>
-        <p class="lead">Explore examples of kitchen, bath and custom renovation work from Johnson Renovations.</p>
-        <div class="projects-grid">
-          <div class="project-main"><img src="assets/project-kitchen-dark-wood-island.webp" alt="Modern kitchen with dark wood island"><div class="caption">Kitchen Remodeling</div></div>
-          <div class="project-side">
-            <div class="project-small"><img src="assets/project-bath-arched-shower.webp" alt="Bathroom remodel with arched marble shower"><div class="caption">Bathroom Remodeling</div></div>
-            <div class="project-small"><img src="assets/project-kitchen-traditional-island.webp" alt="Traditional kitchen with large island"><div class="caption">Kitchen Transformation</div></div>
-            <div class="project-small"><img src="assets/project-kitchen-wood-ceiling.webp" alt="Custom kitchen with wood slat ceiling feature"><div class="caption">Custom Renovation</div></div>
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">What We Do</div>
+            <h2>Full-service remodeling for the way you live.</h2>
           </div>
+          <p class="lead">Major renovations, finish work and project coordination under one experienced team.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><span class="service-num">01</span><h3>Home Remodeling</h3><p>Whole-home renovations, home additions, attic conversions, garage conversions and general contracting.</p></article>
+          <article class="service-card"><span class="service-num">02</span><h3>Kitchen Remodeling</h3><p>Cabinetry, countertops, tile, lighting, flooring, carpentry and custom home bars.</p></article>
+          <article class="service-card"><span class="service-num">03</span><h3>Bathroom Remodeling</h3><p>Showers, tile, plumbing coordination, lighting, flooring and complete bathroom updates.</p></article>
+          <article class="service-card"><span class="service-num">04</span><h3>Carpentry & Custom Work</h3><p>Cabinetry, closets, fireplaces, workshop design and detailed finish carpentry.</p></article>
+          <article class="service-card"><span class="service-num">05</span><h3>Outdoor & Exterior</h3><p>Decks, porches, landscaping coordination, roofing, windows, exterior doors and concrete work.</p></article>
+          <article class="service-card"><span class="service-num">06</span><h3>Planning & Management</h3><p>Project management, 3D rendering, lighting, flooring, tile and other coordinated improvements.</p></article>
         </div>
       </div>
     </section>
 
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-kicker" style="color:var(--gold-soft)">Featured Work</div>
+        <h2>Spaces made to feel finished.</h2>
+        <p class="lead">A selection of Johnson Renovations kitchen, bathroom and custom renovation projects.</p>
+        <div class="projects-grid">
+          <div class="project"><img src="assets/project-kitchen-dark-wood-island.webp" alt="Modern kitchen with dark wood island"><div class="project-label">Kitchen Remodeling</div></div>
+          <div class="project"><img src="assets/gallery/kitchens/kitchen-01.webp" alt="White traditional kitchen renovation"><div class="project-label">Kitchen Renovation</div></div>
+          <div class="project"><img src="assets/project-bath-arched-shower.webp" alt="Arched marble shower remodel"><div class="project-label">Bathroom Remodeling</div></div>
+          <div class="project"><img src="assets/project-kitchen-traditional-island.webp" alt="Traditional kitchen with large island"><div class="project-label">Kitchen Transformation</div></div>
+          <div class="project"><img src="assets/project-kitchen-wood-ceiling.webp" alt="Kitchen with custom wood ceiling feature"><div class="project-label">Custom Renovation</div></div>
+          <div class="project"><img src="assets/gallery/kitchens/kitchen-05.webp" alt="Johnson Renovations kitchen project"><div class="project-label">Custom Kitchen</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container why-grid">
+        <div>
+          <div class="section-kicker">Why Johnson Renovations</div>
+          <h2>Experience that stays involved.</h2>
+          <p class="lead">Renovation decisions add up quickly. Our role is to help keep the project organized, the work coordinated and the finished space aligned with what you had in mind.</p>
+          <a class="btn btn-dark" href="#contact">Book a Consultation</a>
+        </div>
+        <div class="why-list">
+          <div class="why-card"><span>01</span><h3>25 Years of Experience</h3><p>Long-term remodeling experience serving homeowners throughout DFW.</p></div>
+          <div class="why-card"><span>02</span><h3>Project Coordination</h3><p>One team helping organize the major trades, details and sequencing.</p></div>
+          <div class="why-card"><span>03</span><h3>Custom Craftsmanship</h3><p>Carpentry, cabinetry and finish details tailored to the home.</p></div>
+          <div class="why-card"><span>04</span><h3>Clear Communication</h3><p>A straightforward process from consultation through the final walkthrough.</p></div>
+        </div>
+      </div>
+    </section>
+
+    
 
     <section class="albums" id="albums">
       <div class="container">
         <div class="section-kicker">Project Albums</div>
-        <h2>Browse our renovation work.</h2>
-        <p class="lead">All of the project photos you provided are organized here by project type, with before-and-after transformations kept together in their own album.</p>
+        <h2>More renovation work.</h2>
+        <p class="lead">Browse additional projects by category, including the before-and-after transformations you provided.</p>
         <div class="album-tabs" role="tablist" aria-label="Project photo albums">
-          <button class="album-tab active" type="button" data-album="kitchens">Kitchens &amp; Cabinetry</button>
+          <button class="album-tab active" type="button" data-album="kitchens">Kitchens & Cabinetry</button>
           <button class="album-tab" type="button" data-album="bathrooms">Bathrooms</button>
-          <button class="album-tab" type="button" data-album="before-after">Before &amp; After</button>
+          <button class="album-tab" type="button" data-album="before-after">Before & After</button>
         </div>
         <div class="album-panel active" id="album-kitchens">
-          <div class="album-title-row"><h3>Kitchens &amp; Custom Cabinetry</h3><span class="album-count">12 additional project photos</span></div>
+          <div class="album-title-row"><h3>Kitchens & Custom Cabinetry</h3><span class="album-count">Additional project photos</span></div>
           <div class="album-grid">
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-03.webp" alt="Johnson Renovations kitchen and cabinetry project 3"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-04.webp" alt="Johnson Renovations kitchen and cabinetry project 4"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-06.webp" alt="Johnson Renovations kitchen and cabinetry project 6"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-07.webp" alt="Johnson Renovations kitchen and cabinetry project 7"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-08.webp" alt="Johnson Renovations kitchen and cabinetry project 8"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-10.webp" alt="Johnson Renovations kitchen and cabinetry project 10"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-11.webp" alt="Johnson Renovations kitchen and cabinetry project 11"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-12.webp" alt="Johnson Renovations kitchen and cabinetry project 12"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-13.webp" alt="Johnson Renovations kitchen and cabinetry project 13"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-14.webp" alt="Johnson Renovations kitchen and cabinetry project 14"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-15.webp" alt="Johnson Renovations kitchen and cabinetry project 15"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-17.webp" alt="Johnson Renovations kitchen and cabinetry project 17"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-03.webp" alt="Kitchen project 3"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-04.webp" alt="Kitchen project 4"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-06.webp" alt="Kitchen project 6"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-07.webp" alt="Kitchen project 7"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-08.webp" alt="Kitchen project 8"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-10.webp" alt="Kitchen project 10"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-11.webp" alt="Kitchen project 11"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-12.webp" alt="Kitchen project 12"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-13.webp" alt="Kitchen project 13"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-14.webp" alt="Kitchen project 14"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-15.webp" alt="Kitchen project 15"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/kitchens/kitchen-17.webp" alt="Kitchen project 17"></figure>
           </div>
         </div>
         <div class="album-panel" id="album-bathrooms">
-          <div class="album-title-row"><h3>Bathroom Remodels</h3><span class="album-count">8 additional project photos</span></div>
+          <div class="album-title-row"><h3>Bathroom Remodels</h3><span class="album-count">Additional project photos</span></div>
           <div class="album-grid">
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-01.webp" alt="Johnson Renovations bathroom remodel project 1"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-02.webp" alt="Johnson Renovations bathroom remodel project 2"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-03.webp" alt="Johnson Renovations bathroom remodel project 3"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-04.webp" alt="Johnson Renovations bathroom remodel project 4"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-05.webp" alt="Johnson Renovations bathroom remodel project 5"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-07.webp" alt="Johnson Renovations bathroom remodel project 7"></figure>
-            <figure class="album-item"><img loading="lazy" src="images/IMG_2820.jpg" alt="Johnson Renovations bathroom remodel project 9"></figure>
-            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-10.webp" alt="Johnson Renovations bathroom remodel project 10"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-01.webp" alt="Bathroom project 1"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-02.webp" alt="Bathroom project 2"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-03.webp" alt="Bathroom project 3"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-04.webp" alt="Bathroom project 4"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-05.webp" alt="Bathroom project 5"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-07.webp" alt="Bathroom project 7"></figure>
+            <figure class="album-item"><img loading="lazy" src="images/IMG_2820.jpg" alt="Bathroom project 9"></figure>
+            <figure class="album-item"><img loading="lazy" src="assets/gallery/bathrooms/bathroom-10.webp" alt="Bathroom project 10"></figure>
           </div>
         </div>
         <div class="album-panel" id="album-before-after">
-          <div class="album-title-row"><h3>Before &amp; After Transformations</h3><span class="album-count">4 transformations</span></div>
+          <div class="album-title-row"><h3>Before & After Transformations</h3><span class="album-count">4 transformations</span></div>
           <div class="before-after-grid">
-            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-01.webp" alt="Johnson Renovations before and after transformation 1"><p>Before &amp; After — Project 1</p></article>
-            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-02.webp" alt="Johnson Renovations before and after transformation 2"><p>Before &amp; After — Project 2</p></article>
-            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-03.webp" alt="Johnson Renovations before and after transformation 3"><p>Before &amp; After — Project 3</p></article>
-            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-04.webp" alt="Johnson Renovations before and after transformation 4"><p>Before &amp; After — Project 4</p></article>
+            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-01.webp" alt="Before and after transformation 1"><p>Before & After — Project 1</p></article>
+            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-02.webp" alt="Before and after transformation 2"><p>Before & After — Project 2</p></article>
+            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-03.webp" alt="Before and after transformation 3"><p>Before & After — Project 3</p></article>
+            <article class="before-after-card"><img loading="lazy" src="assets/gallery/before-after/before-after-04.webp" alt="Before and after transformation 4"><p>Before & After — Project 4</p></article>
           </div>
         </div>
       </div>
@@ -285,7 +363,8 @@
 
     <section class="process">
       <div class="container">
-        <div class="section-kicker">Our Process</div><h2>A clear path from idea to finished space.</h2>
+        <div class="section-kicker">Our Process</div>
+        <h2>A clear path from idea to finished space.</h2>
         <div class="steps">
           <div class="step"><span>01</span><h3>Consult</h3><p>Tell us what you want to improve, your priorities and the space you have in mind.</p></div>
           <div class="step"><span>02</span><h3>Plan</h3><p>We define the scope, selections and project details, with 3D rendering available where helpful.</p></div>
@@ -295,9 +374,24 @@
       </div>
     </section>
 
-    <section id="areas">
+    
+    <section class="story-section" id="our-story">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <div class="section-kicker">About Johnson Renovations</div>
+          <h2>Built on trust, craftsmanship and lasting relationships.</h2>
+          <p>Johnson Renovations has been serving the DFW area for over 20 years. Our dream is to make your dream a reality. Our team is committed to providing exceptional customer service and also building long lasting family bonds. We understand the importance of integrity which is why we are here with you throughout every step of your project. From a single room in a home to an entire home remodel/ renovation, we are excited to work with you and can't wait to make your dream come true!</p>
+        </div>
+        <div class="story-photo">
+          <img src="assets/project-taupe-appliance-station.webp" alt="Custom kitchen appliance station and cabinetry by Johnson Renovations">
+        </div>
+      </div>
+    </section>
+
+<section class="areas-section" id="areas">
       <div class="container">
-        <div class="section-kicker">Service Area</div><h2>Proudly serving Dallas–Fort Worth.</h2>
+        <div class="section-kicker">Service Area</div>
+        <h2>Proudly serving Dallas–Fort Worth.</h2>
         <p class="lead">Contact us to confirm availability for your address and project.</p>
         <div class="areas">
           <span class="pill">Dallas</span><span class="pill">Arlington</span><span class="pill">Plano</span><span class="pill">Irving</span><span class="pill">Garland</span><span class="pill">Grand Prairie</span><span class="pill">McKinney</span><span class="pill">Mesquite</span><span class="pill">Carrollton</span><span class="pill">Richardson</span><span class="pill">Allen</span><span class="pill">Rowlett</span><span class="pill">Oak Lawn</span><span class="pill">DeSoto</span><span class="pill">Cedar Hill</span><span class="pill">Rockwall</span><span class="pill">Coppell</span><span class="pill">Duncanville</span><span class="pill">North Dallas</span><span class="pill">Farmers Branch</span><span class="pill">Sachse</span><span class="pill">University Park</span><span class="pill">Forney</span><span class="pill">Murphy</span><span class="pill">Addison</span><span class="pill">Highland Park</span><span class="pill">Sunnyvale</span><span class="pill">Parker</span><span class="pill">Preston Hollow</span><span class="pill">Southlake</span><span class="pill">Grapevine</span>
@@ -305,55 +399,111 @@
       </div>
     </section>
 
-    <section>
-      <div class="container"><div class="cta">
-        <div><h2>Ready to renovate?</h2><p>Tell Johnson Renovations what you have in mind and start the conversation about your next home project.</p></div>
-        <a class="btn btn-dark" href="#contact">Get a Free Estimate</a>
-      </div></div>
+    <section class="consult-band">
+      <div class="container consult-inner">
+        <div><h2>Planning a renovation?</h2><p>Tell us what you have in mind and start with a conversation about your space.</p></div>
+        <a class="btn btn-light" href="#contact">Book a Consultation</a>
+      </div>
     </section>
 
-    <section id="contact">
+    <!-- Houzz section intentionally placed directly before map -->
+    <section class="houzz" id="houzz">
+      <div class="container">
+        <div class="section-kicker" style="color:var(--gold-soft)">Houzz Recognition</div>
+        <h2>Trusted by DFW homeowners.</h2>
+        <p class="lead">Johnson Renovations has built a strong Houzz track record with completed projects, homeowner reviews and platform recognition.</p>
+        <div class="stats">
+          <div class="stat"><strong>5.0★</strong><span>Houzz rating</span></div>
+          <div class="stat"><strong>40+</strong><span>Houzz reviews</span></div>
+          <div class="stat"><strong>38</strong><span>Hires on Houzz</span></div>
+          <div class="stat"><strong>23</strong><span>Projects shown</span></div>
+          <div class="stat"><strong>9</strong><span>Awards + badges</span></div>
+        </div>
+        <div class="reviews">
+          <article class="review"><div class="stars">★★★★★</div><p>“Thorough and responsive.”</p><small>Kitchen remodeling client • Houzz</small></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“On budget and schedule.”</p><small>Kitchen & living room remodeling client • Houzz</small></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“Their craftsmanship was superb.”</p><small>Bathroom remodeling client • Houzz</small></article>
+        </div>
+        <p style="margin-top:1.5rem"><a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.houzz.com/pro/johnsonrenovationsdfw/johnson-renovations">View Johnson Renovations on Houzz ↗</a></p>
+      </div>
+    </section>
+
+    <section class="map-section" id="location-map">
+      <div class="container map-wrap">
+        <div class="map-info">
+          <div class="section-kicker" style="color:var(--gold-soft)">Visit Johnson Renovations</div>
+          <h2>Find us in Farmers Branch.</h2>
+          <p>3331 Towerwood Dr, #307, Farmers Branch, TX</p>
+          <p><strong>Mon–Fri:</strong> 8:00 AM–6:00 PM<br><strong>Saturday:</strong> 10:00 AM–3:00 PM<br><strong>Sunday:</strong> Closed</p>
+          <a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=3331+Towerwood+Dr+%23307+Farmers+Branch+TX">Get Directions</a>
+        </div>
+        <div class="map-frame">
+          <iframe title="Johnson Renovations location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3331+Towerwood+Dr+%23307+Farmers+Branch+TX&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-card">
-          <div class="section-kicker" style="color:var(--blue2)">Contact</div>
-          <h2 style="font-size:2.5rem">Let’s talk about your project.</h2>
-          <p>Serving Dallas–Fort Worth and surrounding communities.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=3331+Towerwood+Dr+%23307+Farmers+Branch+TX" target="_blank" rel="noopener">⌖ 3331 Towerwood Dr, #307, Farmers Branch, TX</a>
-          <a href="tel:2145360093">☎ 214-536-0093</a>
-          <a href="mailto:johnsonrenovationsdfw@gmail.com">✉ johnsonrenovationsdfw@gmail.com</a>
-          <div class="business-hours" aria-label="Business hours">
+          <div class="section-kicker" style="color:var(--gold-soft)">Contact</div>
+          <h2 style="font-size:2.6rem">Let’s talk about your project.</h2>
+          <a href="https://www.google.com/maps/search/?api=1&query=3331+Towerwood+Dr+%23307+Farmers+Branch+TX" target="_blank" rel="noopener">3331 Towerwood Dr, #307, Farmers Branch, TX</a>
+          <a href="tel:2145360093">214-536-0093</a>
+          <a href="mailto:johnsonrenovationsdfw@gmail.com">johnsonrenovationsdfw@gmail.com</a>
+          <div class="business-hours">
             <strong>Business Hours</strong>
             <span>Monday–Friday: 8:00 AM–6:00 PM</span>
             <span>Saturday: 10:00 AM–3:00 PM</span>
             <span>Sunday: Closed</span>
           </div>
-          <a href="https://johnsonrenovationsdfw.com/" target="_blank" rel="noopener">↗ johnsonrenovationsdfw.com</a>
-          <a href="https://www.houzz.com/pro/johnsonrenovationsdfw/johnson-renovations" target="_blank" rel="noopener">↗ Houzz Profile</a>
-          <div class="social-links" aria-label="Johnson Renovations social media">
-            <a class="social-link" href="https://www.facebook.com/share/19XNcuynS7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Johnson Renovations on Facebook">f&nbsp; Facebook</a>
-            <a class="social-link" href="https://www.instagram.com/johnsonrenovationsdfw?stkn=bm92aHhmdmh4ZmI5" target="_blank" rel="noopener noreferrer" aria-label="Johnson Renovations on Instagram">◎&nbsp; Instagram</a>
+          <div class="social-links">
+            <a class="social-link" href="https://www.facebook.com/share/19XNcuynS7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="social-link" href="https://www.instagram.com/johnsonrenovationsdfw?stkn=bm92aHhmdmh4ZmI5" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
         <div>
-          <div class="section-kicker">Free Estimate</div><h2 style="font-size:2.8rem">Tell us what you’re planning.</h2>
+          <div class="section-kicker">Book a Consultation</div>
+          <h2 style="font-size:2.9rem">Tell us what you’re planning.</h2>
           <form action="mailto:johnsonrenovationsdfw@gmail.com" method="post" enctype="text/plain">
             <input name="Name" aria-label="Name" placeholder="Your name" required>
             <input name="Phone" aria-label="Phone" placeholder="Phone number" required>
             <input class="full" name="Email" type="email" aria-label="Email" placeholder="Email address" required>
             <select name="Project" aria-label="Project type">
-              <option value="">Select project type</option><option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Whole Home Remodeling</option><option>Home Addition</option><option>Outdoor / Deck / Porch</option><option>Roofing / Exterior</option><option>Flooring / Tile</option><option>Other</option>
+              <option value="">Select project type</option>
+              <option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Whole Home Remodeling</option><option>Home Addition</option><option>Outdoor / Deck / Porch</option><option>Roofing / Exterior</option><option>Flooring / Tile</option><option>Other</option>
             </select>
             <input name="City" aria-label="City" placeholder="Project city">
             <textarea name="Details" aria-label="Project details" placeholder="Tell us about your project..."></textarea>
-            <button class="btn btn-dark full" type="submit">Request My Estimate</button>
+            <button class="btn btn-dark full" type="submit">Book My Consultation</button>
           </form>
-          <p style="color:var(--muted);font-size:.82rem">This starter form opens the visitor’s email app. Connect it to your preferred form service or website backend before launch for direct submissions.</p>
+          <p style="color:var(--muted);font-size:.82rem">This form currently opens the visitor’s email app. It can be connected to a direct form service before the final launch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="section-kicker">FAQ</div>
+        <h2>Common renovation questions.</h2>
+        <div class="faq-grid">
+          <details><summary>What types of projects do you take on?</summary><p>Johnson Renovations handles kitchen and bathroom remodeling, whole-home renovations, additions, carpentry, outdoor work and a range of related improvement projects.</p></details>
+          <details><summary>Do you work throughout DFW?</summary><p>Yes. The company serves Dallas–Fort Worth and the listed surrounding communities. Contact the team to confirm availability for a specific address.</p></details>
+          <details><summary>Can you help with project planning?</summary><p>Yes. Project management and 3D rendering are among the services offered, depending on the project.</p></details>
+          <details><summary>How do I get started?</summary><p>Use the consultation form, call 214-536-0093, or email johnsonrenovationsdfw@gmail.com to start a conversation about your project.</p></details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="container"><strong>Johnson Renovations</strong><span>3331 Towerwood Dr, #307, Farmers Branch, TX</span><span>Mon–Fri 8 AM–6 PM • Sat 10 AM–3 PM • Sun Closed</span><span>214-536-0093</span><span><a href="https://www.facebook.com/share/19XNcuynS7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a> &nbsp;•&nbsp; <a href="https://www.instagram.com/johnsonrenovationsdfw?stkn=bm92aHhmdmh4ZmI5" target="_blank" rel="noopener noreferrer">Instagram</a></span><span>© 2026 Johnson Renovations. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="container">
+      <strong>Johnson Renovations</strong>
+      <span>3331 Towerwood Dr, #307, Farmers Branch, TX</span>
+      <span>214-536-0093</span>
+      <span>© 2026 Johnson Renovations</span>
+    </div>
+  </footer>
 
   <script>
     document.querySelectorAll('.album-tab').forEach(button => {
