@@ -130,6 +130,11 @@
     .consult-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;padding:2.7rem 0}
     .consult-inner h2{font-size:clamp(2rem,4vw,3.6rem);margin:0 0 .5rem}
     .consult-inner p{margin:0;color:#eaf5f8}
+    .story-section{background:#fff}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .story-copy{max-width:620px}
+    .story-copy p{font-size:1.08rem;color:var(--muted);line-height:1.85}
+    .story-photo img{width:100%;height:520px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);border:1px solid rgba(185,149,88,.28)}
     .map-section{background:#171e22;color:#fff}
     .map-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:1.5rem;align-items:stretch}
     .map-info{padding:1.4rem 1rem 1.4rem 0}
@@ -156,7 +161,7 @@
     .social-links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
     .social-link{padding:.55rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-weight:800}
     .mobile-call{display:none}
-    @media(max-width:950px){
+    @media(max-width:950px){.story-grid{grid-template-columns:1fr}.story-photo img{height:420px}
       .navlinks{display:none}
       .intro-grid,.why-grid,.contact-grid,.map-wrap{grid-template-columns:1fr}
       .services-grid{grid-template-columns:repeat(2,1fr)}
@@ -165,7 +170,7 @@
       .project:nth-child(n){grid-column:span 6}
       .map-info{padding-right:0}
     }
-    @media(max-width:680px){
+    @media(max-width:680px){.story-photo img{height:320px}
       .topbar .container{justify-content:center;text-align:center}
       .brand-logo{height:48px;max-width:250px}
       .hero{min-height:650px;background-position:58% center}
@@ -302,26 +307,7 @@
       </div>
     </section>
 
-    <section class="houzz" id="houzz">
-      <div class="container">
-        <div class="section-kicker" style="color:var(--gold-soft)">Houzz Recognition</div>
-        <h2>Trusted by DFW homeowners.</h2>
-        <p class="lead">Johnson Renovations has built a strong Houzz track record with completed projects, homeowner reviews and platform recognition.</p>
-        <div class="stats">
-          <div class="stat"><strong>5.0★</strong><span>Houzz rating</span></div>
-          <div class="stat"><strong>40+</strong><span>Houzz reviews</span></div>
-          <div class="stat"><strong>38</strong><span>Hires on Houzz</span></div>
-          <div class="stat"><strong>23</strong><span>Projects shown</span></div>
-          <div class="stat"><strong>9</strong><span>Awards + badges</span></div>
-        </div>
-        <div class="reviews">
-          <article class="review"><div class="stars">★★★★★</div><p>“Thorough and responsive.”</p><small>Kitchen remodeling client • Houzz</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“On budget and schedule.”</p><small>Kitchen & living room remodeling client • Houzz</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“Their craftsmanship was superb.”</p><small>Bathroom remodeling client • Houzz</small></article>
-        </div>
-        <p style="margin-top:1.5rem"><a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.houzz.com/pro/johnsonrenovationsdfw/johnson-renovations">View Johnson Renovations on Houzz ↗</a></p>
-      </div>
-    </section>
+    
 
     <section class="albums" id="albums">
       <div class="container">
@@ -388,7 +374,21 @@
       </div>
     </section>
 
-    <section class="areas-section" id="areas">
+    
+    <section class="story-section" id="our-story">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <div class="section-kicker">About Johnson Renovations</div>
+          <h2>Built on trust, craftsmanship and lasting relationships.</h2>
+          <p>Johnson Renovations has been serving the DFW area for over 20 years. Our dream is to make your dream a reality. Our team is committed to providing exceptional customer service and also building long lasting family bonds. We understand the importance of integrity which is why we are here with you throughout every step of your project. From a single room in a home to an entire home remodel/ renovation, we are excited to work with you and can't wait to make your dream come true!</p>
+        </div>
+        <div class="story-photo">
+          <img src="assets/project-kitchen-wood-ceiling.webp" alt="Custom Johnson Renovations kitchen with wood ceiling feature">
+        </div>
+      </div>
+    </section>
+
+<section class="areas-section" id="areas">
       <div class="container">
         <div class="section-kicker">Service Area</div>
         <h2>Proudly serving Dallas–Fort Worth.</h2>
@@ -403,6 +403,27 @@
       <div class="container consult-inner">
         <div><h2>Planning a renovation?</h2><p>Tell us what you have in mind and start with a conversation about your space.</p></div>
         <a class="btn btn-light" href="#contact">Book a Consultation</a>
+      </div>
+    </section>
+
+    <section class="houzz" id="houzz">
+      <div class="container">
+        <div class="section-kicker" style="color:var(--gold-soft)">Houzz Recognition</div>
+        <h2>Trusted by DFW homeowners.</h2>
+        <p class="lead">Johnson Renovations has built a strong Houzz track record with completed projects, homeowner reviews and platform recognition.</p>
+        <div class="stats">
+          <div class="stat"><strong>5.0★</strong><span>Houzz rating</span></div>
+          <div class="stat"><strong>40+</strong><span>Houzz reviews</span></div>
+          <div class="stat"><strong>38</strong><span>Hires on Houzz</span></div>
+          <div class="stat"><strong>23</strong><span>Projects shown</span></div>
+          <div class="stat"><strong>9</strong><span>Awards + badges</span></div>
+        </div>
+        <div class="reviews">
+          <article class="review"><div class="stars">★★★★★</div><p>“Thorough and responsive.”</p><small>Kitchen remodeling client • Houzz</small></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“On budget and schedule.”</p><small>Kitchen & living room remodeling client • Houzz</small></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“Their craftsmanship was superb.”</p><small>Bathroom remodeling client • Houzz</small></article>
+        </div>
+        <p style="margin-top:1.5rem"><a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.houzz.com/pro/johnsonrenovationsdfw/johnson-renovations">View Johnson Renovations on Houzz ↗</a></p>
       </div>
     </section>
 
