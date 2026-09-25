@@ -123,6 +123,12 @@
     .before-after-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
     .before-after-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
     .before-after-card p{padding:.85rem 1rem;margin:0;font-weight:800}
+    #album-gazebos-patios{padding:1.35rem;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fafbfb,#f3f0e9)}
+    #album-gazebos-patios .album-title-row{padding:.2rem .25rem .85rem;border-bottom:1px solid var(--line);margin-bottom:1.25rem}
+    #album-gazebos-patios .album-grid{columns:unset;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    #album-gazebos-patios .album-item{margin:0;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(26,34,39,.08)}
+    #album-gazebos-patios .album-item img{width:100%;height:330px;object-fit:cover;object-position:center}
+    @media(max-width:680px){#album-gazebos-patios{padding:.8rem}#album-gazebos-patios .album-grid{grid-template-columns:1fr}#album-gazebos-patios .album-item img{height:260px}}
     .process{background:var(--cream)}
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
     .step{padding:1.45rem;background:#fff;border:1px solid rgba(38,48,56,.1);border-radius:16px}
