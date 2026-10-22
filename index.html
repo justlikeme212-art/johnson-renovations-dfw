@@ -551,7 +551,7 @@
         <div>
           <div class="section-kicker">Book a Consultation</div>
           <h2 style="font-size:2.9rem">Tell us what you’re planning.</h2>
-          <form action="https://formsubmit.co/johnsonrenovationsdfw@gmail.com" method="POST">
+          <form id="consultation-form" action="https://formsubmit.co/johnsonrenovationsdfw@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New Johnson Renovations Consultation Request">
             <input type="hidden" name="_cc" value="kmcgrael@gmail.com">
             <input type="hidden" name="_next" value="https://johnsonrenovationsdfw.com/thanks.html">
@@ -568,6 +568,7 @@
             <textarea name="Details" aria-label="Project details" placeholder="Tell us about your project…" required></textarea>
             <button class="btn btn-dark full" type="submit">Book My Consultation</button>
           </form>
+          <p id="form-status" style="display:none;color:var(--muted);font-size:.9rem;margin-top:.8rem"></p>
           <p style="color:var(--muted);font-size:.82rem">Submit your project details and our team will follow up with you directly.</p>
         </div>
       </div>
@@ -616,6 +617,51 @@
         document.getElementById('album-' + album).classList.add('active');
       });
     });
+
+    const consultationForm = document.getElementById('consultation-form');
+    if (consultationForm) {
+      consultationForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const submitButton = consultationForm.querySelector('button[type="submit"]');
+        const formStatus = document.getElementById('form-status');
+        const originalText = submitButton.textContent;
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+        formStatus.style.display = 'none';
+
+        const formData = new FormData(consultationForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/johnsonrenovationsdfw@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success !== false) {
+            window.location.href = 'thanks.html';
+            return;
+          }
+
+          formStatus.textContent = data.message || 'We could not send your request. Please call 214-536-0093 or email johnsonrenovationsdfw@gmail.com.';
+          formStatus.style.display = 'block';
+        } catch (error) {
+          formStatus.textContent = 'We could not send your request. Please call 214-536-0093 or email johnsonrenovationsdfw@gmail.com.';
+          formStatus.style.display = 'block';
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+      });
+    }
   </script>
 </body>
 </html>
