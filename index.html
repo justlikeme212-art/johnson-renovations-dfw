@@ -551,19 +551,24 @@
         <div>
           <div class="section-kicker">Book a Consultation</div>
           <h2 style="font-size:2.9rem">Tell us what you’re planning.</h2>
-          <form action="mailto:johnsonrenovationsdfw@gmail.com" method="post" enctype="text/plain">
+          <form action="https://formsubmit.co/johnsonrenovationsdfw@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Johnson Renovations Consultation Request">
+            <input type="hidden" name="_cc" value="kmcgrael@gmail.com">
+            <input type="hidden" name="_next" value="https://johnsonrenovationsdfw.com/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <input name="Name" aria-label="Name" placeholder="Your name" required>
             <input name="Phone" aria-label="Phone" placeholder="Phone number" required>
             <input class="full" name="Email" type="email" aria-label="Email" placeholder="Email address" required>
-            <select name="Project" aria-label="Project type">
+            <select name="Project" aria-label="Project type" required>
               <option value="">Select project type</option>
               <option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Whole Home Remodeling</option><option>Home Addition</option><option>Outdoor / Deck / Porch</option><option>Roofing / Exterior</option><option>Flooring / Tile</option><option>Other</option>
             </select>
             <input name="City" aria-label="City" placeholder="Project city">
-            <textarea name="Details" aria-label="Project details" placeholder="Tell us about your project…"></textarea>
+            <textarea name="Details" aria-label="Project details" placeholder="Tell us about your project…" required></textarea>
             <button class="btn btn-dark full" type="submit">Book My Consultation</button>
           </form>
-          <p style="color:var(--muted);font-size:.82rem">This form currently opens the visitor’s email app. It can be connected to a direct form service before the final launch.</p>
+          <p style="color:var(--muted);font-size:.82rem">Submit your project details and our team will follow up with you directly.</p>
         </div>
       </div>
     </section>
