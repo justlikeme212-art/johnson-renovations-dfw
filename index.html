@@ -649,7 +649,7 @@
 
           const data = await response.json();
 
-          if (response.ok && data.success !== false) {
+          if (response.ok && String(data.success).toLowerCase() === 'true') {
             window.location.href = 'thanks.html';
             return;
           }
